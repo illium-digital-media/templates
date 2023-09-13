@@ -8,6 +8,9 @@ import Service3CardVol2 from '@/components/Services/Service3CardVol2/Service3Car
 import Services4Card from '@/components/Services/Services4Card/Services4Card'
 import Services3CardVol3 from '@/components/Services/Services3CardVol3/Services3CardVol3'
 import NavigationFullScreen from '@/components/Navigation/NavigationFullScreen/NavigationFullScreen'
+import MeetOurTeam3Card from '@/components/MeetOurTeam/3Card/MeetOurTeam3Card'
+import MeetOurTeam4Card from '@/components/MeetOurTeam/4Card/MeetOurTeam4Card'
+import MeetOurTeam4CardVol2 from '@/components/MeetOurTeam/4CardVol2/MeetOurTeam4CardVol2'
 
 export default function Home() {
   return (
@@ -22,6 +25,9 @@ export default function Home() {
       <Service3CardVol2 />
       <Services4Card />
       <Services3CardVol3 />
+      <MeetOurTeam3Card />
+      <MeetOurTeam4Card />
+      <MeetOurTeam4CardVol2 />
     </>
 
   )

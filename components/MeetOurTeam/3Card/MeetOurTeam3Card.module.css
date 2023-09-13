@@ -1,0 +1,153 @@
+/* MeetOurTeam3Card.module.css */
+.meetOurTeam3Card {
+  font-family: 'Roboto', 'Arial', sans-serif;
+  padding: var(--sectionPadding);
+  background-color: #1a1a1a;
+}
+
+.csContainer {
+  width: 100%;
+  max-width: 80rem;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: clamp(3rem, 6vw, 4rem);
+}
+
+.csContent {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.csGraphic {
+  width: 100%;
+  max-width: 26.82352941rem;
+  margin: 0 0 1rem 0;
+}
+
+.csTitle {
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: var(--headerColor);
+  position: relative;
+}
+
+.csText {
+  font-size: var(--bodyFontSize);
+  line-height: 1.5em;
+  text-align: inherit;
+  width: 100%;
+  max-width: 40.625rem;
+  margin: 0;
+  color: var(--bodyTextColor);
+}
+
+.csTitle,
+.csText {
+  color: var(--bodyTextColorWhite);
+}
+
+.csText {
+  opacity: .8;
+}
+
+.csCardGroup {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.csItem {
+  list-style: none;
+  width: 100%;
+  max-width: 25.8125rem;
+  position: relative;
+  z-index: 1;
+}
+
+.csItem:hover .csPicture {
+  background-color: #000;
+}
+
+.csItem:hover .csPicture img {
+  transform: scale(1.1);
+  opacity: .6;
+}
+
+.csInfo {
+  width: 85.5%;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  margin: -3.75rem auto 0;
+  box-sizing: border-box;
+  background-color: #1a1a1a;
+  border-top: 4px solid var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.csName {
+  font-size: clamp(1rem, 2vw, 1.5625rem);
+  font-weight: 700;
+  line-height: 1.2em;
+  margin: 0 0 clamp(0.25rem, 1vw, 0.5rem);
+  color: var(--bodyTextColorWhite);
+  display: block;
+  transition: color .3s;
+}
+
+.csJob {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  line-height: 1.5em;
+  color: var(--bodyTextColorWhite);
+  opacity: .8;
+  display: block;
+}
+
+.csPicture {
+  width: 100%;
+  height: clamp(15.375rem, 40vw, 32.25rem);
+  overflow: hidden;
+  display: block;
+  position: relative;
+  transition: background-color 0.3s;
+  z-index: -1;
+}
+
+.csPicture img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform .6s, opacity .3s;
+}
+
+@media only screen and (min-width: 48rem) {
+  .csCardGroup {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+  }
+
+  .csItem {
+    grid-column: span 4;
+  }
+}
