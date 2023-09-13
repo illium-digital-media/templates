@@ -1,0 +1,54 @@
+@media only screen and (min-width: 0rem) {
+  .services3Card {
+    padding: var(--sectionPadding);
+    background-color: #1A1A1A;
+    z-index: 1;
+  }
+  .csContainer {
+    max-width: 80rem;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  .csCardGroup {
+    /* changes to a clamp on tablet */
+    gap: 2.5rem;
+  }
+  .csItem {
+    list-style: none;
+    max-width: 25.8125rem;
+    /* 16px - 24px */
+    gap: clamp(1rem, 3vw, 1.5rem);
+  }
+  .csImageGroup {
+    /* 80px - 100px */
+    width: clamp(5rem, 8vw, 6.25rem);
+  }
+  .csIcon {
+    /* 36px - 48px */
+    width: clamp(2.25rem, 4vw, 3rem);
+    transform: translate(-50%, -50%);
+  }
+  .csH2 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    line-height: 1.2em;
+    text-align: inherit;
+    color: var(--bodyTextColorWhite);
+  }
+  .csItemText {
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+  }
+  .csWaves {
+    /* makes it act like a background image */
+    z-index: -1;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .csCardGroup {
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+}
+                            

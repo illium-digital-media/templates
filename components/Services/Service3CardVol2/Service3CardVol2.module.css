@@ -1,0 +1,165 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .service3Card {
+    padding: var(--sectionPadding);
+  }
+  .csContainer {
+    /* changes at 1280px at tablet */
+    max-width: 34.375rem;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  .csTopper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    letter-spacing: .1em;
+    color: var(--primary);
+  }
+  .csTitle {
+    font-size: var(--headerFontSize);
+    line-height: 1.2em;
+    max-width: 43.75rem;
+    color: var(--headerColor);
+    position: relative;
+  }
+  .csText {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    max-width: 40.625rem;
+    color: var(--bodyTextColor);
+  }
+  .csCardGroup {
+    /* 16px - 20px */
+    column-gap: clamp(1rem, 1.5vw, 1.25rem);
+    /* 24px - 60px */
+    row-gap: clamp(1.5rem, 5vw, 3.75rem);
+  }
+  .csItem {
+    list-style: none;
+    max-width: 22.5rem;
+    /* changes at desktop */
+    padding-top: 9rem;
+  }
+  .csItem:hover .csPicture img {
+    transform: scale(1.2);
+    opacity: .4;
+  }
+  .csItem:hover .csFlex:before {
+    opacity: 1;
+  }
+  .csPicture {
+    /* changes at desktop */
+    height: 15.625rem;
+    background-color: var(--primary);
+    z-index: -1;
+  }
+  .csPicture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes it behave like a background image */
+    object-fit: cover;
+    /* positions top of image to the top of the container */
+    object-position: top;
+    transition: transform .9s, opacity .5s;
+  }
+  .csFlex {
+    width: 88%;
+    /* prevents padding from affecting height and width */
+    box-sizing: border-box;
+    border: 1px solid #DAD9E3;
+    box-shadow: 0px 24px 54px rgba(87, 107, 147, 0.12);
+  }
+  .csFlex:before {
+    /* hover border box */
+    content: '';
+    background: transparent;
+    /* prevents the mouse from interacting with it */
+    pointer-events: none;
+    border: 4px solid var(--primary);
+    border-radius: 0.75rem;
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    display: block;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    transition: opacity .5s;
+  }
+  .csWrapper {
+    /* 80px - 120px */
+    width: clamp(5rem, 9.2vw, 7.5rem);
+    height: clamp(5rem, 9.2vw, 7.5rem);
+    /* 20px - 24px */
+    margin: 0 0 clamp(1.25rem, 1.5vw, 1.5rem);
+    /* we use the same clamp value for height & width, but multiple by -.5 so it will be a negative value, and be half of the height.  Negative margins pull things toward the element so they overlap them, in this case we want the .cs-wrapper to overlap .cs-flex by half its height, so we use the same clamp for height and half it for the margin top value */
+    margin-top: calc(clamp(5rem, 9.2vw, 7.5rem)*-.5);
+    border: 4px solid var(--primary);
+    /* prevents border from affecting height and width */
+    box-sizing: border-box;
+  }
+
+  .csH3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 1.9vw, 1.5625rem);
+    line-height: 1.2em;
+    color: var(--headerColor);
+  }
+  .csItemText {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    /* 20px - 24px */
+    margin: 0 0 clamp(1.25rem, 1.5vw, 1.5rem);
+    color: var(--bodyTextColor);
+  }
+  .csLink {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.5em;
+    color: var(--primary);
+  }
+  .csLink:hover:before {
+    width: 100%;
+  }
+  .csLink:before {
+    /* animated underline */
+    content: '';
+    width: 0%;
+    height: 3px;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: -0.125rem;
+    left: 0;
+    transition: width .3s;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .csContainer {
+    max-width: 80rem;
+  }
+  .csItem {
+    width: 47%;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .csItem {
+    /* 144px - 274px */
+    padding-top: clamp(9rem, 17.5vw, 17.125rem);
+  }
+  .csPicture {
+    /* 224px - 428px */
+    height: clamp(14rem, 28vw, 26.75rem);
+  }
+}
+                                

@@ -1,0 +1,180 @@
+@media only screen and (min-width: 0rem) {
+  .sideBySide {
+    margin: var(--sectionPadding);
+    padding: 0 1rem;
+    /* prevents overflow from the slant shape */
+    z-index: 1;
+  }
+  .sideBySide:before {
+    /* section background */
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .csContainer {
+    max-width: 80rem;
+    /* 60px - 80px top and bottom */
+    padding: clamp(3.75em, 6.82vw, 5em) 0;
+    /* maintains proportional margin top as screen size grows */
+    margin-top: 56vw;
+    /* 40px - 70px */
+    gap: clamp(2.5rem, 5.7vw, 4.375rem);
+  }
+  .csContainer:before {
+    /* section slant on mobile */
+    content: '';
+    width: 62.5rem;
+    height: 125rem;
+    background: var(--primary);
+    opacity: 1;
+    position: absolute;
+    z-index: -1;
+    display: block;
+    top: -28.75rem;
+    /* these last two center it horizontally and rotate -65deg */
+    left: 50%;
+    transform: translateX(-50%) rotate(-65deg);
+  }
+  .csBackground {
+    aspect-ratio: 1;
+  }
+  .csBackground img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .csTopper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    letter-spacing: .1em;
+    color: var(--primary);
+  }
+  .csTitle {
+    font-size: var(--headerFontSize);
+    line-height: 1.2em;
+    max-width: 43.75rem;
+    color: var(--headerColor);
+  }
+  .csTopper {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    color: var(--bodyTextColorWhite);
+  }
+  .csTitle {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    /* changes to 45% at tablet */
+    width: 95%;
+    max-width: 32.125rem;
+    color: var(--bodyTextColorWhite);
+  }
+  .csCardGroup {
+    max-width: 35.25rem;
+    /* 20px - 32px */
+    gap: clamp(1.25rem, 3vw, 2rem);
+  }
+  .csItem {
+    list-style: none;
+    /* 32px - 64px */
+    gap: clamp(2rem, 5vw, 4rem);
+  }
+  .csIcon {
+    width: 3.75rem;
+  }
+  .csH3 {
+    /* 25px - 31px */
+    font-size: clamp(1.5625rem, 3vw, 1.9375rem);
+    line-height: 1.2em;
+    color: var(--bodyTextColorWhite);
+  }
+  .csItemText {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1rem, 1.25rem);
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+  }
+  .csButtonSolid {
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    min-width: 9.375rem;
+    background-color: var(--secondary);
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  .csButtonSolid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #fff;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width .3s;
+  }
+  .csButtonSolid:hover:before {
+    width: 100%;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .sideBySide:before {
+    /* remove the pseudo for the section background */
+    display: none;
+  }
+  .csBackground {
+    /* reset height to let top and bottom properties create the height */
+    aspect-ratio: initial;
+    /* creates the gap between the image and the blue section */
+    top: 3.75rem;
+  }
+  .csBackground img {
+    width: 60%;
+    left: auto;
+    right: 0;
+    object-position: 80% top;
+  }
+  .csContainer {
+    margin-top: 0;
+  }
+  .csContainer:before {
+    /* make really tall so it always covers top to bottom, even when you add more list items */
+    height: 250rem;
+    /* make really really wide so it covers the left side at large scree sizes */
+    width: 250rem;
+    /* push X amount from the center line to the right.  If after you added content and the slant is not covering everything, make this negative number even more negative to pull it more to the right */
+    margin-right: -68.75rem;
+    /* prevents the mouse from interacting with it */
+    pointer-events: none;
+    top: 50%;
+    left: auto;
+    /* pushes the right edge of the element to the center line of the parent */
+    right: 50%;
+    transform: rotate(-35deg) translateY(-50%);
+  }
+  .csTitle {
+    width: 45%;
+  }
+  .csCardGroup {
+    width: 52%;
+    /* 24px - 32px */
+    padding-left: clamp(1.5rem, 3vw, 2rem);
+    /* prevents padding from adding to width */
+    box-sizing: border-box;
+  }
+  .csItem {
+    flex-direction: row;
+  }
+}
+                                

@@ -1,0 +1,86 @@
+/* Base styles */
+.hero856 {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: clamp(7.25rem, 16.82vw, 10.25rem) 1rem clamp(3.75rem, 7.82vw, 6.25rem);
+    z-index: 1;
+}
+
+.csContainer {
+    max-width: 80rem;
+}
+
+.csContent {
+    max-width: 39.375rem;
+}
+
+.csTopper {
+    line-height: 1.2em;
+    text-align: inherit;
+    letter-spacing: .1em;
+    color: var(--primary);
+}
+
+.csTitle {
+    font-size: clamp(2.4375rem, 5vw, 3.8125rem);
+    line-height: 1.2em;
+    max-width: 23ch;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+}
+
+.csText {
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    line-height: 1.5em;
+    max-width: 33.1875rem;
+    margin: 0 0 clamp(1.75rem, 3.92vw, 2.5rem) 0;
+    color: var(--bodyTextColor);
+}
+
+.csButtonSolid {
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    min-width: 9.375rem;
+    background-color: var(--primary);
+    z-index: 1;
+}
+
+.csButtonSolid::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width .3s;
+}
+
+.csButtonSolid:hover::before {
+    width: 100%;
+}
+
+.csPicture {
+    max-width: 35.625rem;
+    border-radius: 0 clamp(6.25rem, 17vw, 12.5rem) 0 clamp(6.25rem, 17vw, 12.5rem);
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.16);
+}
+
+.csWave {
+    width: 320%;
+    z-index: -1;
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    .csContent {
+        width: 40vw;
+    }
+
+    .csWave {
+        width: 100%;
+        left: 0;
+        transform: scaleX(-1);
+    }
+}
