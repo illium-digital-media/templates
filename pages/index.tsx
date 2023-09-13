@@ -11,6 +11,7 @@ import NavigationFullScreen from '@/components/Navigation/NavigationFullScreen/N
 import MeetOurTeam3Card from '@/components/MeetOurTeam/3Card/MeetOurTeam3Card'
 import MeetOurTeam4Card from '@/components/MeetOurTeam/4Card/MeetOurTeam4Card'
 import MeetOurTeam4CardVol2 from '@/components/MeetOurTeam/4CardVol2/MeetOurTeam4CardVol2'
+import SideBySideStandard from '@/components/SideBySide/Standard/SideBySideStandard'
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <MeetOurTeam3Card />
       <MeetOurTeam4Card />
       <MeetOurTeam4CardVol2 />
+      <SideBySideStandard />
     </>
 
   )
