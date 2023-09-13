@@ -1,68 +1,122 @@
+
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   .services4Card {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
     padding: var(--sectionPadding);
   }
-  .csContainer {
+  .services4Card .csContainer {
+    width: 100%;
     /* changes to 1440px on desktop */
     max-width: 43.75rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
   }
-  .csTopper {
+  .services4Card .csContent {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  .services4Card .csTopper {
     font-size: var(--topperFontSize);
     line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
     letter-spacing: .1em;
+    font-weight: 700;
     color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
   }
-  .csTitle {
+  .services4Card .csTitle {
     font-size: var(--headerFontSize);
+    font-weight: 900;
     line-height: 1.2em;
+    text-align: inherit;
     max-width: 43.75rem;
+    margin: 0 0 1rem 0;
     color: var(--headerColor);
+    position: relative;
   }
-  .csText {
+  .services4Card .csText {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
     max-width: 40.625rem;
+    margin: 0;
     color: var(--bodyTextColor);
   }
-  .csTitle {
+  .services4Card .csTitle {
     /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
     max-width: 30ch;
   }
-  .csCardGroup {
+  .services4Card .csCardGroup {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     /* 16px - 20px */
     gap: clamp(1rem, 1.5vw, 1.25rem);
   }
-  .csItem {
+  .services4Card .csItem {
     list-style: none;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
     background-color: #F7F7F7;
+    border-radius: 1rem;
+    /* clips image corners */
+    overflow: hidden;
     /* prevents padding from adding to height and width */
     box-sizing: border-box;
+    position: relative;
     z-index: 1;
     transition: background-color 0.3s;
   }
-  .csItem:hover .csImage {
+  .services4Card .csItem:hover {
+    cursor: pointer;
+  }
+  .services4Card .csItem:hover .csImage {
     opacity: 1;
   }
-  .csItem:hover .csImage img {
+  .services4Card .csItem:hover .csImage img {
     transform: scale(1.1);
   }
-  .csItem:hover .csIcon {
+  .services4Card .csItem:hover .csIcon {
     /* turns it white */
     filter: grayscale(1) brightness(1000%);
   }
-  .csItem:hover .csH3,
-  .csItem:hover .csItemText {
+  .services4Card .csItem:hover .csH3,
+  .services4Card .csItem:hover .csItemText {
     color: #fff;
   }
-  .csImage {
+  .services4Card .csImage {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
     z-index: -1;
     background-color: var(--primary);
     transition: opacity .3s;
   }
-  .csImage img {
+  .services4Card .csImage img {
     position: absolute;
     top: 0;
     left: 0;
@@ -72,32 +126,58 @@
     object-fit: cover;
     transition: transform .6s;
   }
-  .csIcon {
-    height: 3rem;
+  .services4Card .csLink {
+    text-decoration: none;
   }
-  .csIcon path {
+  .services4Card .csIcon {
+    width: auto;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+  .services4Card .csIcon path {
     transition: fill .3s;
   }
-  .csH3 {
+  .services4Card .csH3 {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
     line-height: 1.2em;
+    margin: 0;
+    margin-bottom: 1rem;
     color: var(--headerColor);
     transition: color .3s;
+    font-weight: bold;
   }
-  .csItemText {
+  .services4Card .csItemText {
+    font-size: 1rem;
     line-height: 1.5em;
+    margin: 0;
     color: var(--bodyTextColor);
     transition: color .3s;
   }
 }
-
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .services4Card .csCardGroup {
+    justify-content: space-between;
+    /* makes sure every box "stretches" to be the same height as the tallest box */
+    align-items: stretch;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .services4Card .csItem {
+    width: 48.6%;
+  }
+}
 /* Desktop - 1300px */
 @media only screen and (min-width: 81.25rem) {
-  .csContainer {
+  .services4Card .csContainer {
     max-width: 90rem;
   }
-  .csItem {
+  .services4Card .csCardGroup {
+    justify-content: center;
+  }
+  .services4Card .csItem {
     /* we do this so it's stackable. You can add new any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of reviews, they don't stay centered.  They align with their grid lines. If you want 4 reviews in a row, lower the width under 22.5vw or 23% to get the desired sizes fit 4 in a row and then stack when you add more */
     width: clamp(23.84%, 22.5vw, 23.95%);
   }
