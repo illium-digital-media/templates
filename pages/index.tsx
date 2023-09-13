@@ -7,10 +7,12 @@ import Services3Cards from '@/components/Services/Service3Cards/Service3Cards'
 import Service3CardVol2 from '@/components/Services/Service3CardVol2/Service3CardVol2'
 import Services4Card from '@/components/Services/Services4Card/Services4Card'
 import Services3CardVol3 from '@/components/Services/Services3CardVol3/Services3CardVol3'
+import NavigationFullScreen from '@/components/Navigation/NavigationFullScreen/NavigationFullScreen'
 
 export default function Home() {
   return (
     <>
+      <NavigationFullScreen />
       <HeroContentRight />
       <LandingCenter />
       <Services6Cards />

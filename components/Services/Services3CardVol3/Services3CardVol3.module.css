@@ -1,12 +1,6 @@
-/*-- -------------------------- -->
-<---         Services           -->
-<--- -------------------------- -*/
-
 /* Mobile */
 @media only screen and (min-width: 0rem) {
   .services3Card {
-    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-    font-family: 'Roboto', 'Arial', sans-serif;
     padding: var(--sectionPadding);
   }
   .csContainer {
