@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Process4Steps.module.css';
+import Topper from '@/components1/Topper/Topper';
 
 const Process4Steps: React.FC = () => {
   return (
@@ -7,7 +8,7 @@ const Process4Steps: React.FC = () => {
       <div className={styles.csContainer}>
         {/* Left Section */}
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Steps</span>
+          <Topper text='Steps' />
           <h2 className={styles.csTitle}>Our Process from Start to Finish</h2>
           <p className={styles.csText}>
             strong amet, consectetur adipiscing elit. At tortor facilisis non, rutrum sagittis, libero. Iaculis egestas enim lacinia est phasellus odio laoreet nisl amet.

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Gallery5Images.module.css';
+import Topper from '@/components1/Topper/Topper';
 
 interface ImageData {
   imgSrc: string;
@@ -55,7 +56,7 @@ const Gallery5Images: React.FC = () => {
     <section className={styles.gallery5Images}>
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Our Portfolio</span>
+          <Topper text='Our Portfolio' />
           <h2 className={styles.csTitle}>Our Photo Gallery</h2>
         </div>
         <div className={styles.csGallery}>

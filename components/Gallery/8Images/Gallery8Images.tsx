@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from './Gallery8Images.module.css';
+import Topper from '@/components1/Topper/Topper';
 
 // Define your image data as an array of objects
 const imageData = [
@@ -53,7 +54,7 @@ const Gallery8Images: React.FC = () => {
     <section className={styles.gallery8Images}>
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Service</span>
+          <Topper text='Service' />
           <h2 className={styles.csTitle}>Landscaping Services in Sometown, USA</h2>
           <p className={styles.csText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.

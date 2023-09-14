@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SideBySideReverse.module.css';
+import Topper from '@/components1/Topper/Topper';
 
 type CustomStyle = {
   [key: string]: string | number;
@@ -50,7 +51,7 @@ const SideBySideReverse: React.FC = () => {
         </div>
         {/* Right Content Section */}
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Our Mission & Vision</span>
+          <Topper text='Our Mission & Vision' />
           <h2 className={styles.csTitle}>We Are The Champion Of The Finance Industry</h2>
           <p className={styles.csText}>
             Highly qualified tax consultants with many years of experience in the field offer a full range of services to help you build a sound financial future. Tax advice received in time allows you to avoid many problems with the tax authorities. We will help you as efficiently as possible and in a short time.

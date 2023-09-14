@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './WhyChooseUsStats.module.css';
+import Topper from '@/components1/Topper/Topper';
 
 const statItems = [
   { iconSrc: 'https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/transparency.svg', title: 'Transparency' },
@@ -21,7 +22,7 @@ const WhyChooseUsStats = () => {
     <section className={styles.csSection}>
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>YOU'RE IN GOOD COMPANY</span>
+          <Topper text="You'\re In Good Company" />
           <h2 className={styles.csTitle}>2,000+ Companies Taking Investment from Us</h2>
           <p className={styles.csText}>
             In the new era of technology, we look to the future with certainty and pride for our company and business. Consider all the drivers of change that give you the blocks and pride for our components you need to change to create a truly professional website era.

@@ -53,22 +53,13 @@
     width: 100%;
     object-fit: cover;
   }
-  .csTopper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    letter-spacing: .1em;
-    color: var(--primary);
-  }
   .csTitle {
     font-size: var(--headerFontSize);
     line-height: 1.2em;
     max-width: 43.75rem;
     color: var(--headerColor);
   }
-  .csTopper {
-    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
-    color: var(--bodyTextColorWhite);
-  }
+
   .csTitle {
     /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
     /* changes to 45% at tablet */

@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './StatsSBS4.module.css';
+import Topper from '@/components1/Topper/Topper';
 
 // Define the list of items
 const items = [
@@ -38,7 +39,7 @@ const StatsSBS4: React.FC = () => {
     <section className={styles.statsSBS4}>
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Our services</span>
+          <Topper text='Our Services' />
           <h2 className={styles.csTitle}>We offer project management services</h2>
           <p className={styles.csText}>
             We can help you design your project and develop a comprehensive plan to ensure that it meets your specific needs and requirements. Our team of architects and engineers will work closely with you to create a design that is both functional and aesthetically pleasing.

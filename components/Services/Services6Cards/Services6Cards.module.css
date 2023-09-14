@@ -23,17 +23,6 @@
     /* set text align to left if content needs to be left aligned */
     text-align: center;
   }
-  .csTopper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    font-weight: 700;
-    margin-bottom: 0.25rem;
-    color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    display: block;
-    text-align: inherit;
-  }
   .csTitle {
     font-size: var(--headerFontSize);
     line-height: 1.2em;

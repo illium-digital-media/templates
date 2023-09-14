@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './WhyChooseUsSideBySide.module.css'; // Import your CSS module here
+import Topper from '@/components1/Topper/Topper';
 
 const items = [
   {
@@ -59,7 +60,7 @@ const WhyChooseUsSideBySide = () => {
           />
         </div>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Why Choose Us</span>
+          <Topper text='Why Choose Us' />
           <h2 className={styles.csTitle}>
             We Care About <span className={styles.csColor}>Your Health</span> And Wellness
           </h2>

@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './Services6Cards.module.css';
 import { services } from './services';
+import Topper from '@/components1/Topper/Topper';
 
 const Services6Cards = () => {
     return (
         <section className={styles.services1188}>
             <div className={styles.csContainer}>
                 <div className={styles.csContent}>
-                    <span className={styles.csTopper}>Other services</span>
+                    <Topper text='Other Services' />
                     <h2 className={styles.csTitle}>We Provide Quality Auto Repair Services</h2>
                     <p className={styles.csText}>
                         Facilisis condimentum viverra scelerisque ac morbi sit sed. Turpis sagittis in blandit eleifend tortor ullamcorper eu placerat. Et orci felis volutpat, etiam vitae egestas volutpat pulvinar.

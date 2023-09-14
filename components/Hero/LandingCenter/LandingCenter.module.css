@@ -78,17 +78,7 @@
     column-gap: 1.25rem;
     box-sizing: border-box;
   }
-  .csTopper {
-    font-size: clamp(0.8125rem, 1.6vw, 1rem);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: center;
-    letter-spacing: 0.1rem;
-    font-weight: 700;
-    color: var(--primaryLight);
-    margin-bottom: 1rem;
-    display: block;
-  }
+
   .csTitle {
     font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
     font-weight: 900;

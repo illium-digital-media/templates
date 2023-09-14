@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './SideBySideStandard.module.css'; // Import the module CSS
 import Link from 'next/link';
 import features from './features';
+import Topper from '@/components1/Topper/Topper';
 
 const SideBySideStandard = () => {
   return (
@@ -32,7 +33,7 @@ const SideBySideStandard = () => {
         </div>
         {/* Right Content Section */}
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>About Us</span>
+          <Topper text='About Us' />
           <h2 className={styles.csTitle}>Get Help on Finance</h2>
           <p className={styles.csText}>
             In the new era of technology, we look into the future with certainty and pride for our company and business.

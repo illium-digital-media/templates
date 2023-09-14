@@ -4,13 +4,14 @@ import peopleImage from './people.jpg';
 import { services } from './services';
 import Cube from './Cube';
 import Link from 'next/link';
+import Topper from '@/components1/Topper/Topper';
 
 const SideBySide = () => {
     return (
         <section className={`relative overflow-hidden ml-0 mr-0 ${styles.sideBySide}`}>
             <div className={`w-full m-auto flex flex-col justify-center items-start relative z-10 ${styles.csContainer}`}>
                 <div className={`w-full`}>
-                    <span className={`uppercase font-bold block mb-1 ${styles.csTopper}`}>Service</span>
+                    <Topper text='Service' color='text-white' />
                     <h2 className={`font-black relative mb-4 ${styles.csTitle}`}>Laboratory Testing Services</h2>
                 </div>
                 <ul className={`w-full p-0 m-0 flex flex-col justify-center items-center ${styles.csCardGroup}`}>

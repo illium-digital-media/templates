@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Service3Cards.module.css';
 import { serviceData } from './services';
 import Link from 'next/link';
+import Topper from '@/components1/Topper/Topper';
 
 const Service3Cards = () => {
   return (
@@ -9,7 +10,7 @@ const Service3Cards = () => {
       <div className={`w-full m-auto flex flex-col items-center ${styles.csContainer}`}>
         <div className={`text-left w-full flex flex-col items-start md:flex-row md:justify-between md:items-center ${styles.csContent}`}>
           <div className={`flex-none md:w-1/2 ${styles.csFlexGroup}`}>
-            <span className={`uppercase mb-1 block font-bold ${styles.csTopper}`}>Our Services</span>
+            <Topper text='Our Services' />
             <h2 className={`font-black relative mb-4 ${styles.csTitle}`}>
               We Provide Other Helps to <span className={styles.csColor}>Enhance Your Beauty</span>
             </h2>

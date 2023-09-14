@@ -13,12 +13,6 @@
     max-width: 39.375rem;
 }
 
-.csTopper {
-    line-height: 1.2em;
-    letter-spacing: .1em;
-    color: var(--primary);
-}
-
 .csTitle {
     font-size: clamp(2.4375rem, 5vw, 3.8125rem);
     line-height: 1.2em;

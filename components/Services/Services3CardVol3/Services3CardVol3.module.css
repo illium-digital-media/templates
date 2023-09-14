@@ -25,17 +25,6 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
   }
-  .csTopper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
-    letter-spacing: .1em;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
-    display: block;
-  }
   .csTitle {
     font-size: var(--headerFontSize);
     font-weight: 900;

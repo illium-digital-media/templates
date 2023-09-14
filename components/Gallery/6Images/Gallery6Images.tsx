@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Gallery6Images.module.css'; // Import your CSS module
+import Topper from '@/components1/Topper/Topper';
 
 const Gallery6Images: React.FC = () => {
   const imageData = [
@@ -59,7 +60,7 @@ const Gallery6Images: React.FC = () => {
     <section className={styles.gallery6Images}>
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Service</span>
+          <Topper text='Service' />
           <h2 className={styles.csTitle}>Landscaping Services in Sometown, USA</h2>
           <p className={styles.csText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.

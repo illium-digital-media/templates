@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './Form.module.css';
+import Topper from '@/components1/Topper/Topper';
 
 const contactInfo = [
   { header: 'Address', link: 'PO Box 15252 Mill Creek, Washington, USA 98082' },
@@ -25,7 +26,7 @@ const Form: React.FC = () => {
     <section className={styles.csSection}>
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Contact Us</span>
+          <Topper text='Contact Us' />
           <h2 className={styles.csTitle}>Contact Information</h2>
           <p className={styles.csText}>
             Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Eu volutpat odio facilisis mauris sit amet massa. Sit amet est placerat in egestas

@@ -28,19 +28,6 @@
     /* centers content horizontally, set to flex-start to left align */
     align-items: flex-start;
   }
-
-  .csTopper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
-    letter-spacing: 0.1em;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
-    display: block;
-  }
-
   .csTitle {
     font-size: var(--headerFontSize);
     font-weight: 900;
@@ -62,7 +49,7 @@
     color: var(--bodyTextColor);
   }
 
-  /* Override. csTopper csTitle and first csText should be removed and put into your global CSS sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+  /* Override. csTitle and first csText should be removed and put into your global CSS sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
   .csText {
     max-width: 32.625rem;
   }

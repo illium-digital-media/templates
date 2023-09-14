@@ -2,13 +2,14 @@ import React from 'react';
 import styles from './Services4Card.module.css'; // Import your CSS module
 import servicesData from './services';
 import Link from 'next/link';
+import Topper from '@/components1/Topper/Topper';
 
 const Services4Card = () => {
   return (
     <section className={`p-section`}>
       <div className={`w-full m-auto flex flex-col items-center ${styles.csContainer}`}>
         <div className={`text-center w-full flex flex-col items-center`}>
-          <span className={`uppercase font-bold text-primary mb-1 relative ${styles.csTopper}`}>Our Services</span>
+          <Topper text='Our Services' />
           <h2 className={styles.csTitle}>We Are Committed To Delivering Top Quality Legal Services</h2>
           <p className={styles.csText}>
             At Stitch Law, let us help you solve problems so that you can focus on your mission. We support businesses through periods of expansion, succession.

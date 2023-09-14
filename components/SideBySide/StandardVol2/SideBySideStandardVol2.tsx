@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './SideBySideStandardVol2.module.css'; // Import the CSS module
+import Topper from '@/components1/Topper/Topper';
 
 const SideBySideStandardVol2: React.FC = () => {
   return (
@@ -75,7 +76,7 @@ const SideBySideStandardVol2: React.FC = () => {
         </div>
         {/* Right Content Section */}
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>About Us</span>
+          <Topper text='About Us' />
           <h2 className={styles.csTitle}>
             Always Ready to Invest in Any Business
           </h2>

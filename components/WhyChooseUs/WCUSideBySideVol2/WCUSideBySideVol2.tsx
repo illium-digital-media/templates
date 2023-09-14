@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './WCUSideBySideVol2.module.css'; // Replace 'YourComponent' with your actual component name
+import Topper from '@/components1/Topper/Topper';
 
 const WCUSideBySideVol2: React.FC = () => {
   const checkmarkData = [
@@ -33,7 +34,7 @@ const WCUSideBySideVol2: React.FC = () => {
           />
         </picture>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Why Choose Us</span>
+          <Topper text='Why Choose Us' />
           <h2 className={styles.csTitle}>
             Et orci volutpat, back up generator installations
           </h2>

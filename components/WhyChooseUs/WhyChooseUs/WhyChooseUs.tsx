@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './WhyChooseUs.module.css'; // Import your CSS Modules file for styling
+import Topper from '@/components1/Topper/Topper';
 
 const items = [
   {
@@ -25,7 +26,7 @@ const WhyChooseUs: React.FC = () => {
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
           <div className={styles.csFlex}>
-            <span className={styles.csTopper}>Our Process</span>
+            <Topper text='Our Process' />
             <h2 className={styles.csTitle}>Why You Need the Top Lawyers in O’Connor</h2>
           </div>
           <p className={styles.csText}>

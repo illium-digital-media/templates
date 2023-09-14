@@ -2,13 +2,14 @@ import React from 'react';
 import styles from './Pricing3Card.module.css'; // Import your CSS module
 import packages from './packages';
 import Link from 'next/link';
+import Topper from '@/components1/Topper/Topper';
 
 const Pricing3Card: React.FC = () => {
   return (
     <section className={`relative ${styles.pricing3Card}`}>
       <div className={`w-full m-auto flex flex-col items-center relative ${styles.csContainer}`}>
         <div className={`text-center w-full flex flex-col items-center relative z-10`}>
-          <span className={`uppercase font-bold mb-1 block ${styles.csTopper}`}>Pricing</span>
+          <Topper text='Pricing' />
           <h2 className={`font-black mb-4 relative ${styles.csTitle}`}>Simple & Transparent Pricing</h2>
           <p className={`w-full m-0 ${styles.csText}`}>
             We are one of the leading auto repair shops serving customers in Tucson. All mechanic services are performed by highly qualified mechanics. We handle all makes and models in more than 40 car brands.

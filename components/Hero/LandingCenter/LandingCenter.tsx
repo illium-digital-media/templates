@@ -4,13 +4,14 @@ import styles from './LandingCenter.module.css';
 import playSvg from './Play.svg';
 import backgroundM from './BackgroundM.jpg';
 import background from './Background.jpg';
+import Topper from '@/components1/Topper/Topper';
 
 const LandingCenter: React.FC = () => {
     return (
         <section className={styles.hero229}>
             <div className={styles.csContainer}>
                 <div className={styles.csFlexGroup}>
-                    <span className={styles.csTopper}>mountain hiking society</span>
+                    <Topper text='Mountain Hiking Society' />
                     <h1 className={styles.csTitle}>Explore the World with Exciting People</h1>
                     <p className={styles.csText}>
                         Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet lectus proin nibh condimentum.

@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image'; // Import the next/image package
 import styles from './SideBySideStandardVol3.module.css'; // Import the CSS module
+import Topper from '@/components1/Topper/Topper';
 
 const SideBySideStandardVol3: React.FC = () => {
   return (
@@ -59,7 +60,7 @@ const SideBySideStandardVol3: React.FC = () => {
           </div>
         </div>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>About Us</span>
+          <Topper text='About Us' />
           <h2 className={styles.csTitle}>Quality With The Best Standards</h2>
           <p className={styles.csText}>
             Our professionals will perform diagnostic tests, fluid flush and

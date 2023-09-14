@@ -1,13 +1,14 @@
 // SideBySideAnimated.js
 import React from 'react';
 import styles from './SideBySideAnimated.module.css';
+import Topper from '@/components1/Topper/Topper';
 
 const SideBySideAnimated = () => {
   return (
     <section className={styles.sideBySideAnimated}>
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Why Choose Us</span>
+          <Topper text='Why Choose Us' />
           <h2 className={styles.csTitle}>Expert House Cleaning Service Can Trust</h2>
           <p className={styles.csText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc lobortis mattis aliquam faucibus purus in. Diam ut venenatis tellus in metus vulputate eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac.

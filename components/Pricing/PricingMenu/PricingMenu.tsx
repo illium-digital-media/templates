@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './PricingMenu.module.css'; // Import your module.css file
 import menuItems from './menuitems';
+import Topper from '@/components1/Topper/Topper';
 
 const PricingMenu: React.FC = () => {
   return (
     <section className={`p-section ${styles.pricingMenu}`}>
       <div className={`w-full m-auto flex flex-col items-center ${styles.csContainer}`}>
         <div className={`text-left w-full flex flex-col items-center`}>
-          <span className={`uppercase font-bold mb-1 text-primary text-topperFontSize ${styles.csTopper}`}>Pricing</span>
+          <Topper text='Pricing' />
           <h2 className={`font-black mb-4 text-headerColor ${styles.csTitle}`}>All Hair Services</h2>
         </div>
         <div className={`w-full flex flex-col items-center justify-center md:flex-row md:justify-between ${styles.csMenu}`}>

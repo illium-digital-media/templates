@@ -30,18 +30,7 @@
     /* set text align to center if content needs to be centrally aligned */
     text-align: left;
   }
-  .csTopper {
-    font-size: var(--topperFontSize);
-    line-height: 1.2em;
-    font-weight: 700;
-    width: 100%;
-    margin-bottom: 0.25rem;
-    color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    display: block;
-    text-align: inherit;
-  }
+
   .csTitle {
     font-size: var(--headerFontSize);
     line-height: 1.2em;

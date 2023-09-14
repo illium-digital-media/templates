@@ -3,13 +3,14 @@ import styles from './Service3CardVol2.module.css';
 import { services } from './services';
 import Image from 'next/image';
 import Link from 'next/link';
+import Topper from '@/components1/Topper/Topper';
 
 const Service3CardVol2 = () => {
   return (
     <section className={styles.service3Card}>
       <div className={`w-full m-auto flex flex-col items-center ${styles.csContainer}`}>
         <div className={`text-center w-full flex flex-col items-center`}>
-          <span className={`uppercase font-bold mb-1 block ${styles.csTopper}`}>Services</span>
+          <Topper text='Services' />
           <h2 className={`font-black relative mb-4 ${styles.csTitle}`}>Landscaping Services in Sometown, USA</h2>
           <p className={`w-full m-0 ${styles.csText}`}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
