@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Process4Steps.module.css';
 import Topper from '@/components1/Topper/Topper';
+import stepsData from './steps';
 
 const Process4Steps: React.FC = () => {
   return (
@@ -17,30 +18,14 @@ const Process4Steps: React.FC = () => {
         </div>
         {/* Right Section */}
         <ul className={styles.csRightSection}>
-          <li className={styles.csItem}>
-            <span className={styles.csNumber}>01</span>
-            <p className={styles.csItemText}>
-              <strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. At tortor facilisis non.
-            </p>
-          </li>
-          <li className={styles.csItem}>
-            <span className={styles.csNumber}>02</span>
-            <p className={styles.csItemText}>
-              <strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. At tortor facilisis non.
-            </p>
-          </li>
-          <li className={styles.csItem}>
-            <span className={styles.csNumber}>03</span>
-            <p className={styles.csItemText}>
-              <strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. At tortor facilisis non.
-            </p>
-          </li>
-          <li className={styles.csItem}>
-            <span className={styles.csNumber}>04</span>
-            <p className={styles.csItemText}>
-              <strong>Lorem ipsum dolor</strong> sit amet, consectetur adipiscing elit. At tortor facilisis non.
-            </p>
-          </li>
+          {stepsData.map((step, index) => (
+            <li key={index} className={styles.csItem}>
+              <span className={styles.csNumber}>{step.number}</span>
+              <p className={styles.csItemText}>
+                <strong>{step.text}</strong>
+              </p>
+            </li>
+          ))}
         </ul>
       </div>
     </section>

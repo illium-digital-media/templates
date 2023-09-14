@@ -1,15 +1,9 @@
 import React from 'react';
 import styles from './WCUSideBySideVol2.module.css'; // Replace 'YourComponent' with your actual component name
 import Topper from '@/components1/Topper/Topper';
+import checkmarkData from './checkmarkdata';
 
 const WCUSideBySideVol2: React.FC = () => {
-  const checkmarkData = [
-    'Clean Work',
-    'Attention To Detail',
-    'Punctual',
-    'Quality Guaranteed',
-  ];
-
   return (
     <section className={styles.csSection}>
       <div className={styles.csContainer}>

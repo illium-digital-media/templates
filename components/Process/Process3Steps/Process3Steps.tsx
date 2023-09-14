@@ -1,40 +1,8 @@
 import React from 'react';
 import styles from './Process3Steps.module.css';
 import Topper from '@/components1/Topper/Topper';
-
-type StepProps = {
-  iconSrc: string;
-  title: string;
-  description: string;
-};
-
-const steps: StepProps[] = [
-    {
-      iconSrc: 'https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ficon-orange.svg',
-      title: 'Contact Us',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nemo voluptate.',
-    },
-    {
-      iconSrc: 'https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ficon-orange.svg',
-      title: 'Initial Evaluation',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nemo voluptate.',
-    },
-    {
-      iconSrc: 'https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Ficon-orange.svg',
-      title: 'Develop a Plan',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero nemo voluptate.',
-    },
-  ];
-
-const Step: React.FC<StepProps> = ({ iconSrc, title, description }) => (
-  <li className={styles.csItem}>
-    <picture className={styles.csPicture}>
-      <img className={styles.csIcon} src={iconSrc} alt="icon" width="32" height="32" loading="lazy" decoding="async" aria-hidden="true" />
-    </picture>
-    <h3 className={styles.csH3}>{title}</h3>
-    <p className={styles.csItemP}>{description}</p>
-  </li>
-);
+import stepsData from './steps';
+import Link from 'next/link';
 
 const Arrow: React.FC = () => (
   <li className={`${styles.csItem} ${styles.csArrow}`} aria-hidden="true">
@@ -44,7 +12,7 @@ const Arrow: React.FC = () => (
 
 const Process3Steps: React.FC = () => {
   return (
-    <section id="process3Steps" className={styles.process3Steps}>
+    <section className={styles.process3Steps}>
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
           <Topper text='Our Process' />
@@ -54,14 +22,20 @@ const Process3Steps: React.FC = () => {
           </p>
         </div>
         <ul className={styles.csCardGroup}>
-          {steps.map((step, index) => (
+          {stepsData.map((step, index) => (
             <React.Fragment key={index}>
-              <Step iconSrc={step.iconSrc} title={step.title} description={step.description} />
-              {index < steps.length - 1 && <Arrow />}
+              <li className={styles.csItem}>
+                <picture className={styles.csPicture}>
+                  <img className={styles.csIcon} src={step.iconSrc} alt="icon" width="32" height="32" loading="lazy" decoding="async" aria-hidden="true" />
+                </picture>
+                <h3 className={styles.csH3}>{step.title}</h3>
+                <p className={styles.csItemP}>{step.description}</p>
+              </li>
+              {index < stepsData.length - 1 && <Arrow />}
             </React.Fragment>
           ))}
         </ul>
-        <a href="" className={styles.csButtonSolid}>View All Projects</a>
+        <Link href="" className={styles.csButtonSolid}>View All Projects</Link>
       </div>
     </section>
   );

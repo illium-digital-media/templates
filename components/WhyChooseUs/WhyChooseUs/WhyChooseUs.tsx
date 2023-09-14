@@ -1,24 +1,7 @@
 import React from 'react';
 import styles from './WhyChooseUs.module.css'; // Import your CSS Modules file for styling
 import Topper from '@/components1/Topper/Topper';
-
-const items = [
-  {
-    icon: 'https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/award.svg',
-    title: '99% winning guarantee',
-    text: 'Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage, and claims.',
-  },
-  {
-    icon: 'https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/sheild-black.svg',
-    title: 'Secure management',
-    text: 'Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage, and claims.',
-  },
-  {
-    icon: 'https://csimg.nyc3.digitaloceanspaces.com/Why-Choose/call.svg',
-    title: 'Full-time support',
-    text: 'Full range of shipping disputes such as charter party disputes, demurrage claims, purchase agreements, trade finance, carriage, and claims.',
-  },
-];
+import items from './wcuitems';
 
 const WhyChooseUs: React.FC = () => {
   return (

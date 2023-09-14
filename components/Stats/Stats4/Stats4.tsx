@@ -1,22 +1,15 @@
 import React from 'react';
 import styles from './Stats4.module.css';
+import statsItems from './stats';
 
 const Stats4: React.FC = () => {
-  // Define an array of items
-  const items = [
-    { number: '100', desc: 'Natural Styles' },
-    { number: '25+', desc: 'Products' },
-    { number: '5K+', desc: 'Clients' },
-    { number: '15', desc: 'Color Shades' },
-  ];
-
   return (
     <section className={`p-section relative ${styles.stats4}`}>
       <div className={styles.csContainer}>
         {/* Stats */}
         <ul className={styles.csCardGroup}>
           {/* Map over the items array to generate list items */}
-          {items.map((item, index) => (
+          {statsItems.map((item, index) => (
             <li key={index} className={styles.csItem}>
               <span className={styles.csNumber}>{item.number}</span>
               <span className={styles.csDesc}>{item.desc}</span>

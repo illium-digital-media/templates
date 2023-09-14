@@ -10,14 +10,6 @@ const SideBySideStandardVol2: React.FC = () => {
         <div className={styles.csImageGroup}>
           {/* Main Image */}
           <picture className={styles.csPicture}>
-            <source
-              media="(max-width: 600px)"
-              srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant2.png"
-            />
-            <source
-              media="(min-width: 601px)"
-              srcSet="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/People/accountant2.png"
-            />
             <img
               loading="lazy"
               decoding="async"
