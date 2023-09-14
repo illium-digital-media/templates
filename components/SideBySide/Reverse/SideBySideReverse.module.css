@@ -1,0 +1,270 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .sideBySideReverse {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+    background-color: #FEFBF3;
+    overflow: hidden;
+  }
+   .csContainer {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: clamp(3rem, 4vw, 4rem);
+  }
+   .csContent {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+  }
+   .csTopper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+   .csTitle {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+   .csText {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+   .csText {
+    /* Override.  csTopper csTitle and first csText should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section-specific override that stays inside this stitch */
+    margin-bottom: 1rem;
+  }
+   .csText:last-of-type {
+    margin-bottom: 2rem;
+  }
+   .csButtonSolid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #1a1a1a;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+    transition: color .3s;
+  }
+   .csButtonSolid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width .3s;
+  }
+   .csButtonSolid:hover {
+    color: #fff;
+  }
+   .csButtonSolid:hover:before {
+    width: 100%;
+  }
+   .csContentFlair {
+    width: 100%;
+    margin: 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+   .csBar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+   .csH3 {
+    font-size: 1rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    width: 100%;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+   .csProgress {
+    width: 100%;
+    height: 8px;
+    overflow: hidden;
+    background-color: #E8E8E8;
+  }
+   .csProgressBar {
+    width: var(--progress);
+    height: 100%;
+    background-color: var(--primary);
+    display: block;
+  }
+   .csPercentage {
+    font-size: 0.875rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+   .csImageGroup {
+    width: 100%;
+    max-width: 34.375rem;
+    position: relative;
+    display: block;
+    /* width divided by height */
+    aspect-ratio: 0.91620112;
+    z-index: 1;
+  }
+   .csPicture {
+    /* big background image */
+    width: 93%;
+    height: 93%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+  }
+   .csPicture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+   .csBox {
+    text-align: center;
+    width: auto;
+    /* 16px - 40px */
+    padding: clamp(1rem, 3vw, 2.5rem);
+    background-color: #1a1a1a;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+  }
+   .csIcon {
+    /* 40px - 60px */
+    width: clamp(2.5rem, 4vw, 3.75rem);
+    height: auto;
+    margin-right: 0;
+    display: block;
+  }
+   .csNumber {
+    /* 25px - 39px */
+    font-size: clamp(1.5625rem, 3vw, 2.4375rem);
+    line-height: 1.2em;
+    font-weight: 900;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    display: block;
+    z-index: 10;
+  }
+   .csDesc {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    z-index: 10;
+  }
+   .csGraphic {
+    width: 150%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
+}
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+   .csContainer {
+    max-width: 80rem;
+    /* set to horizontal arrangement */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+   .csContent {
+    width: 47%;
+    align-self: center;
+  }
+   .csImageGroup {
+    width: 43vw;
+    max-width: 35rem;
+    min-height: 25rem;
+    height: auto;
+    margin: 0 0 0 4.5rem;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+   .csPicture {
+    width: 100%;
+    height: 100%;
+  }
+   .csBox {
+    bottom: 2.5rem;
+    right: auto;
+    /* -40px to -108px */
+    left: calc(clamp(2.5rem, 6vw + 1rem, 6.75rem)*-1);
+  }
+   .csGraphic {
+    max-width: 44.6875rem;
+    right: auto;
+    left: 8.125rem;
+    transform: translateY(-50%);
+  }
+}

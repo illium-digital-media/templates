@@ -12,6 +12,11 @@ import MeetOurTeam3Card from '@/components/MeetOurTeam/3Card/MeetOurTeam3Card'
 import MeetOurTeam4Card from '@/components/MeetOurTeam/4Card/MeetOurTeam4Card'
 import MeetOurTeam4CardVol2 from '@/components/MeetOurTeam/4CardVol2/MeetOurTeam4CardVol2'
 import SideBySideStandard from '@/components/SideBySide/Standard/SideBySideStandard'
+import SideBySideReverse from '@/components/SideBySide/Reverse/SideBySideReverse'
+import SideBySideStandardVol2 from '@/components/SideBySide/StandardVol2/SideBySideStandardVol2'
+import SideBySideStandardVol3 from '@/components/SideBySide/StandardVol3/SideBySideStandardVol3'
+import PricingMenu from '@/components/Pricing/PricingMenu/PricingMenu'
+import Pricing3Card from '@/components/Pricing/Pricing3Card/Pricing3Card'
 
 export default function Home() {
   return (
@@ -30,6 +35,11 @@ export default function Home() {
       <MeetOurTeam4Card />
       <MeetOurTeam4CardVol2 />
       <SideBySideStandard />
+      <SideBySideReverse />
+      <SideBySideStandardVol2 />
+      <SideBySideStandardVol3 />
+      <PricingMenu />
+      <Pricing3Card />
     </>
 
   )

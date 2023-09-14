@@ -1,0 +1,251 @@
+
+@media only screen and (min-width: 0rem) {
+  .sideBySideAnimated {
+    /* Remove the font-family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+    overflow: hidden;
+  }
+  @keyframes floatAnimation {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2em);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes floatAnimation2 {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1em);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  .csContainer {
+    width: 100%;
+    /* Changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* 48px - 56px */
+    gap: clamp(3rem, 3vw, 3.5rem);
+  }
+  .csContent {
+    /* Set text-align to left if content needs to be left-aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+    /* Centers content horizontally; set to flex-start to left align */
+    align-items: flex-start;
+  }
+  .csTopper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  .csTitle {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  .csText {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  .csText {
+    /* Override. csTopper, csTitle, and first csText should be removed and put into your global CSS sheet so it can control every instance of them on your site and be consistent. This selector is a section-specific override that stays inside this stitch. */
+    margin-bottom: 1rem;
+  }
+  .csText:last-of-type {
+    margin-bottom: 2rem;
+  }
+  .csButtonSolid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* Prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  .csButtonSolid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width .3s;
+  }
+  .csButtonSolid:hover:before {
+    width: 100%;
+  }
+  .csImageGroup {
+    /* Everything in the group is in ems so we can scale them down with this min/max font size tied to the view width */
+    font-size: min(2.3vw, 1em);
+    width: 36.1875em;
+    height: 36.75em;
+    position: relative;
+    /* Sends it to the top above the content */
+    order: -1;
+  }
+  .csSplash {
+    width: 35.625em;
+    height: 36.625em;
+    opacity: .1;
+    position: absolute;
+    left: 0.3125em;
+    top: 0;
+  }
+  .csBlob {
+    width: 24.5em;
+    height: 31.0625em;
+    position: absolute;
+    right: 0em;
+    top: 0.625em;
+  }
+  .csLightning {
+    width: 4em;
+    height: 6.4375em;
+    position: absolute;
+    right: 2.5em;
+    top: 0.5em;
+    transform: rotate(23deg);
+  }
+  .csLeftImage {
+    width: 13.1875em;
+    height: 13.1875em;
+    border-radius: 50%;
+    /* Cover the 1px gap between border and image */
+    background-color: #F7F7F7;
+    border: 12px solid #F7F7F7;
+    /* Clips image to the circle */
+    overflow: hidden;
+    position: absolute;
+    left: -0.75em;
+    top: 8.1875em;
+    z-index: 10;
+    animation-name: floatAnimation2;
+    animation-duration: 6s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  .csLeftImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes it act like a background image */
+    object-fit: cover;
+  }
+  .csBottomImage {
+    width: 11.25em;
+    height: 11.25em;
+    border-radius: 50%;
+    /* Cover the 1px gap between border and image */
+    background-color: #F7F7F7;
+    border: 12px solid #F7F7F7;
+    /* Clips image to the circle */
+    overflow: hidden;
+    position: absolute;
+    right: 11.25em;
+    bottom: -0.75em;
+    z-index: 10;
+    animation-name: floatAnimation;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  .csBottomImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes it act like a background image */
+    object-fit: cover;
+  }
+  .csPerson {
+    width: 24.125em;
+    height: auto;
+    position: absolute;
+    right: 2.875em;
+    bottom: 4.0625em;
+  }
+  .csPerson img {
+    width: 100%;
+    height: auto;
+  }
+  .csMask {
+    width: 23.9375em;
+    height: 10.8125em;
+    position: absolute;
+    right: -2.0625em;
+    bottom: 2.6875em;
+    z-index: 2;
+  }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .csContainer {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .cs-ul {
+    margin-top: 1rem;
+  }
+  .csImageGroup {
+    font-size: min(1.1vw, 1em);
+    /* Prevents flexbox from squishing it */
+    flex: none;
+  }
+}
