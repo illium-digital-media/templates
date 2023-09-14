@@ -34,16 +34,6 @@
   }
   
    .csTitle {
-    font-size: var(--headerFontSize);
-    font-weight: 900;
-    line-height: 1.2em;
-    text-align: inherit;
-    max-width: 43.75rem;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-    position: relative;
-  }
-   .csTitle {
     /* csTitle override. csTitle and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This second cs-text is a section specific override that stays inside this stitch */
     /* removed at tablet */
     margin: 0 0 2rem 0;

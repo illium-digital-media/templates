@@ -2,6 +2,7 @@
 import React from 'react';
 import styles from './SideBySideAnimated.module.css';
 import Topper from '@/components1/Topper/Topper';
+import Title from '@/components1/Title/Title';
 
 const SideBySideAnimated = () => {
   return (
@@ -9,7 +10,7 @@ const SideBySideAnimated = () => {
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
           <Topper text='Why Choose Us' />
-          <h2 className={styles.csTitle}>Expert House Cleaning Service Can Trust</h2>
+          <Title title='Expert House Cleaning Service Can Trust' />
           <p className={styles.csText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc lobortis mattis aliquam faucibus purus in. Diam ut venenatis tellus in metus vulputate eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac.
           </p>

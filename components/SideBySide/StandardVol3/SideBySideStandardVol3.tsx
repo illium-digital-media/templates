@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image'; // Import the next/image package
 import styles from './SideBySideStandardVol3.module.css'; // Import the CSS module
 import Topper from '@/components1/Topper/Topper';
+import Title from '@/components1/Title/Title';
 
 const SideBySideStandardVol3: React.FC = () => {
   return (
@@ -61,7 +62,7 @@ const SideBySideStandardVol3: React.FC = () => {
         </div>
         <div className={styles.csContent}>
           <Topper text='About Us' />
-          <h2 className={styles.csTitle}>Quality With The Best Standards</h2>
+          <Title title='Quality With The Best Standards' />
           <p className={styles.csText}>
             Our professionals will perform diagnostic tests, fluid flush and
             fills, engine replacement, oil changes, and total vehicle overhauls.

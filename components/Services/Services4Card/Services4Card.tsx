@@ -3,6 +3,7 @@ import styles from './Services4Card.module.css'; // Import your CSS module
 import servicesData from './services';
 import Link from 'next/link';
 import Topper from '@/components1/Topper/Topper';
+import Title from '@/components1/Title/Title';
 
 const Services4Card = () => {
   return (
@@ -10,7 +11,7 @@ const Services4Card = () => {
       <div className={`w-full m-auto flex flex-col items-center ${styles.csContainer}`}>
         <div className={`text-center w-full flex flex-col items-center`}>
           <Topper text='Our Services' />
-          <h2 className={styles.csTitle}>We Are Committed To Delivering Top Quality Legal Services</h2>
+          <Title title='We Are Committed To Delivering Top Quality Legal Services' />
           <p className={styles.csText}>
             At Stitch Law, let us help you solve problems so that you can focus on your mission. We support businesses through periods of expansion, succession.
           </p>

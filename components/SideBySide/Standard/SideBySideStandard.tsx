@@ -3,6 +3,7 @@ import styles from './SideBySideStandard.module.css'; // Import the module CSS
 import Link from 'next/link';
 import features from './features';
 import Topper from '@/components1/Topper/Topper';
+import Title from '@/components1/Title/Title';
 
 const SideBySideStandard = () => {
   return (
@@ -34,7 +35,7 @@ const SideBySideStandard = () => {
         {/* Right Content Section */}
         <div className={styles.csContent}>
           <Topper text='About Us' />
-          <h2 className={styles.csTitle}>Get Help on Finance</h2>
+          <Title title='Get Help on Finance' />
           <p className={styles.csText}>
             In the new era of technology, we look into the future with certainty and pride for our company and business.
             Considering all the drivers of change gives you the blocks & pride for our components you need to change to create a truly professional website in the new era.

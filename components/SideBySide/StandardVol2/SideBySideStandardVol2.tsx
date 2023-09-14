@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './SideBySideStandardVol2.module.css'; // Import the CSS module
 import Topper from '@/components1/Topper/Topper';
+import Title from '@/components1/Title/Title';
 
 const SideBySideStandardVol2: React.FC = () => {
   return (
@@ -69,9 +70,7 @@ const SideBySideStandardVol2: React.FC = () => {
         {/* Right Content Section */}
         <div className={styles.csContent}>
           <Topper text='About Us' />
-          <h2 className={styles.csTitle}>
-            Always Ready to Invest in Any Business
-          </h2>
+          <Title title='Always Ready to Invest in Any Business' />
           <h3 className={styles.csH3}>
             We consider all the drivers of change gives you the blocks pride
             for our components you need to change to create.

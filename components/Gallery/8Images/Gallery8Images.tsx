@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './Gallery8Images.module.css';
 import Topper from '@/components1/Topper/Topper';
 import imageData from './images';
+import Title from '@/components1/Title/Title';
 
 const Gallery8Images: React.FC = () => {
   return (
@@ -9,7 +10,7 @@ const Gallery8Images: React.FC = () => {
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
           <Topper text='Service' />
-          <h2 className={styles.csTitle}>Landscaping Services in Sometown, USA</h2>
+          <Title title='Landscaping Services in Sometown, USA' />
           <p className={styles.csText}>
             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.
           </p>

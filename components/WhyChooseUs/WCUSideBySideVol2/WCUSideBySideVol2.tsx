@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './WCUSideBySideVol2.module.css'; // Replace 'YourComponent' with your actual component name
 import Topper from '@/components1/Topper/Topper';
 import checkmarkData from './checkmarkdata';
+import Title from '@/components1/Title/Title';
 
 const WCUSideBySideVol2: React.FC = () => {
   return (
@@ -29,9 +30,7 @@ const WCUSideBySideVol2: React.FC = () => {
         </picture>
         <div className={styles.csContent}>
           <Topper text='Why Choose Us' />
-          <h2 className={styles.csTitle}>
-            Et orci volutpat, back up generator installations
-          </h2>
+          <Title title='Et orci volutpat, back up generator installations' />
           <p className={styles.csText}>
             Facilisis condimentum viverra scelerisque ac morbi sit sed. Turpis
             sagittis in blandit eleifend tortor ullamcorper eu placerat. Et

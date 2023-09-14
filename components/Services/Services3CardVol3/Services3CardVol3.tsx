@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { services } from './services';
 import Graphic from './Graphic';
 import Topper from '@/components1/Topper/Topper';
+import Title from '@/components1/Title/Title';
 
 const Services3CardVol3 = () => {
     return (
@@ -11,7 +12,7 @@ const Services3CardVol3 = () => {
             <div className={styles.csContainer}>
                 <div className={styles.csContent}>
                     <Topper text='Plumbing Done Right' />
-                    <h2 className={styles.csTitle}>Dedicated To Excellence And Service</h2>
+                    <Title title='Dedicated To Excellence And Service' />
                     <p className={styles.csText}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa ut sed odio cursus. Malesuada scelerisque eget eu, sollicitudin tellus nibh aenean enim sed. Ut vitae eget commodo consectetur felis augue.
                     </p>

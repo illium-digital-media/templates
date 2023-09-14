@@ -2,14 +2,16 @@ import React from 'react';
 import styles from './Form.module.css';
 import Topper from '@/components1/Topper/Topper';
 import { contactInfo, socialLinks, formInputs } from './formdata';
+import Section from '@/components1/Section';
+import Title from '@/components1/Title/Title';
 
 const Form: React.FC = () => {
   return (
-    <section className={styles.csSection}>
-      <div className={styles.csContainer}>
-        <div className={styles.csContent}>
+    <Section>
+      <div className={`w-full m-auto flex flex-col justify-center items-start gap-12 ${styles.csContainer}`}>
+        <div className={`text-left ${styles.csContent}`}>
           <Topper text='Contact Us' />
-          <h2 className={styles.csTitle}>Contact Information</h2>
+          <Title title='Contact Information' />
           <p className={styles.csText}>
             Justo eget magna fermentum iaculis eu non diam phasellus vestibulum. Eu volutpat odio facilisis mauris sit amet massa. Sit amet est placerat in egestas
           </p>
@@ -50,7 +52,7 @@ const Form: React.FC = () => {
           </button>
         </form>
       </div>
-    </section>
+    </Section>
   );
 };
 

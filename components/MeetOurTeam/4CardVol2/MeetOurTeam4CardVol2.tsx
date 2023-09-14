@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './MeetOurTeam4CardVol2.module.css'; // Import the module CSS
 import Topper from '@/components1/Topper/Topper';
+import Title from '@/components1/Title/Title';
 
 const teamMembers = [
   {
@@ -32,7 +33,7 @@ const MeetOurTeam4CardVol2 = () => {
         <div className={styles.csContent}>
           <div className={styles.csFlexGroup}>
             <Topper text='Meet Us' />
-            <h2 className={styles.csTitle}>Our Team Members</h2>
+            <Title title='Our Team Members' />
           </div>
           <a href="" className={styles.csButtonSolid}>View All Members</a>
         </div>
