@@ -1,0 +1,121 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .gallery5Images {
+    padding: var(--sectionPadding);
+  }
+
+  .csContainer {
+    width: 100%;
+    max-width: 59rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  .csContent {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .csTopper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+
+  .csTitle {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+
+  .csTopper {
+    color: #767676;
+  }
+
+  .csTitle {
+    margin: 0;
+  }
+
+  .csGallery {
+    width: 100%;
+    max-width: 31.25rem;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: clamp(1rem, 1.5vw, 1.25rem);
+  }
+
+  .csImage {
+    min-height: clamp(16.25rem, 60vw, 20rem);
+    border-radius: 1rem;
+    overflow: hidden;
+    display: block;
+    grid-column: span 12;
+    grid-row: span 1;
+    position: relative;
+  }
+
+  .csImage img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Tablet - 700px */
+@media only screen and (min-width: 43.75rem) {
+  .csGallery {
+    max-width: 100%;
+    grid-template-rows: 1fr;
+  }
+
+  .csImage {
+    grid-column: span 4;
+  }
+
+  .csImage:nth-of-type(4),
+  .csImage:nth-of-type(5) {
+    grid-column: span 6;
+  }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  .csContainer {
+    max-width: 80rem;
+  }
+
+  .csGallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .csImage {
+    grid-column: span 1;
+  }
+
+  .csImage:nth-of-type(4),
+  .csImage:nth-of-type(5) {
+    grid-column: span 1;
+  }
+}

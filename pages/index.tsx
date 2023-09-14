@@ -17,6 +17,7 @@ import SideBySideStandardVol2 from '@/components/SideBySide/StandardVol2/SideByS
 import SideBySideStandardVol3 from '@/components/SideBySide/StandardVol3/SideBySideStandardVol3'
 import PricingMenu from '@/components/Pricing/PricingMenu/PricingMenu'
 import Pricing3Card from '@/components/Pricing/Pricing3Card/Pricing3Card'
+import Gallery5Images from '@/components/Gallery/5Images/Gallery5Images'
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
       <SideBySideStandardVol3 />
       <PricingMenu />
       <Pricing3Card />
+      <Gallery5Images />
     </>
 
   )

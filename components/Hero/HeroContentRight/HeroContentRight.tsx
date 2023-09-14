@@ -2,13 +2,14 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from './HeroContentRight.module.css';
 import heroImage from './herocontentright.jpg'
+import Topper from '@/components1/Topper/Topper';
 
 function Hero() {
     return (
         <section className={`relative overflow-hidden lg:text-left bg-gray-200 ${styles.hero856}`}>
             <div className={`w-full flex flex-col space-y-12 mx-auto flex justify-center items-center lg:flex-row lg:justify-between ${styles.csContainer}`}>
                 <div className={`flex justify-center items-center flex-col lg:flex-none lg:items-start lg:order-2 ${styles.csContent}`}>
-                    <span className={`uppercase block font-extrabold text-base mb-1 ${styles.csTopper}`}>Modern and Professional</span>
+                    <Topper text={"Modern and Professional"} />
                     <h1 className={`relative text-center font-extrabold lg:text-left ${styles.csTitle}`}>Physical Therapy & Health and Wellness</h1>
                     <p className={`text-center w-full lg:text-left ${styles.csText}`}>
                         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus unde id saepe quo. Est, ea! Lorem,

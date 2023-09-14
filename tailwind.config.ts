@@ -8,11 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       colors: {
         primary: '#CE410D',
         primaryLight: '#001F3F',
@@ -21,6 +16,15 @@ const config: Config = {
         headerColor: '#1a1a1a',
         bodyTextColor: '#4E4B66',
         bodyTextColorWhite: '#FAFBFC',
+      },
+      fontSize: {
+        // Define custom font sizes using your variables
+        topperFontSize: 'clamp(0.8125rem, 1.6vw, 1rem);',
+        header: 'var(--headerFontSize)',
+      },
+      padding: {
+        // Define custom padding using your variables
+        section: 'clamp(3.75rem, 7.82vw, 6.25rem) 1rem;',
       },
     },
   },

@@ -1,7 +1,7 @@
 import Case from "./Case";
 import libraryImage from './library.jpg';
 
-export const services = [
+const servicesData = [
   {
     id: 1,
     title: '99% winning guarantee',
@@ -31,3 +31,5 @@ export const services = [
     image: libraryImage,
   },
 ];
+
+export default servicesData;

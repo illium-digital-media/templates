@@ -1,140 +1,46 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
-  .pricingMenu {
-    padding: var(--sectionPadding);
-  }
   .csContainer {
-    width: 100%;
     max-width: 80rem;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
   }
-  .csContent {
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
-  }
   .csTopper {
-    font-size: var(--topperFontSize);
     line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
     letter-spacing: .1em;
-    font-weight: 700;
-    color: var(--primary);
-    margin-bottom: 0.25rem;
-    display: block;
   }
   .csTitle {
     font-size: var(--headerFontSize);
-    font-weight: 900;
     line-height: 1.2em;
-    text-align: inherit;
     max-width: 43.75rem;
-    margin: 0 0 1rem 0;
-    color: var(--headerColor);
-    position: relative;
   }
-  .csTitle {
-    /* Override.  csTopper csTitle and first csText should be removed and put into your global CSS sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
-    margin: 0;
-  }
+
   .csMenu {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     column-gap: 1.25rem;
     /* 28px - 40px */
     row-gap: clamp(1.75rem, 3vw, 2.5rem);
   }
   .csMenuGroup {
     max-width: 37.5rem;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     /* 28px - 40px */
     gap: clamp(1.75rem, 3vw, 2.5rem);
   }
-  .csMenuItem {
-    list-style: none;
-    width: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0.5rem;
-  }
-  .csH3 {
-    width: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1.5rem;
-    position: relative;
-  }
   .csH3:before {
     /* grey line */
-    content: '';
-    width: 100%;
-    height: 2px;
-    background: #E8E8E8;
-    opacity: 1;
-    position: absolute;
-    display: block;
     top: 0.8125rem;
-    left: 0;
     z-index: -1;
   }
   .csHeader {
     /* 20px - 25px */
     font-size: clamp(1.25rem, 2vw, 1.5625rem);
     line-height: 1.2em;
-    text-align: inherit;
-    font-weight: 700;
     max-width: 25rem;
-    padding-right: 0.5rem;
-    background-color: #fff;
-    color: var(--headerColor);
   }
   .csPrice {
-    font-size: 1rem;
     line-height: 1.5em;
-    font-weight: 400;
-    padding-left: 0.5rem;
-    background-color: #fff;
-    color: var(--headerColor);
   }
   .csMenuText {
-    font-size: 1rem;
     line-height: 1.5em;
-    text-align: inherit;
-    margin: 0;
     color: var(--bodyTextColor);
-  }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-  .csMenu {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  .csMenuGroup {
-    width: 100%;
   }
 }

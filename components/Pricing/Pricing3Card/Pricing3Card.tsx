@@ -5,16 +5,16 @@ import Link from 'next/link';
 
 const Pricing3Card: React.FC = () => {
   return (
-    <section className={styles.pricing3Card}>
-      <div className={styles.csContainer}>
-        <div className={styles.csContent}>
-          <span className={styles.csTopper}>Pricing</span>
-          <h2 className={styles.csTitle}>Simple & Transparent Pricing</h2>
-          <p className={styles.csText}>
+    <section className={`relative ${styles.pricing3Card}`}>
+      <div className={`w-full m-auto flex flex-col items-center relative ${styles.csContainer}`}>
+        <div className={`text-center w-full flex flex-col items-center relative z-10`}>
+          <span className={`uppercase font-bold mb-1 block ${styles.csTopper}`}>Pricing</span>
+          <h2 className={`font-black mb-4 relative ${styles.csTitle}`}>Simple & Transparent Pricing</h2>
+          <p className={`w-full m-0 ${styles.csText}`}>
             We are one of the leading auto repair shops serving customers in Tucson. All mechanic services are performed by highly qualified mechanics. We handle all makes and models in more than 40 car brands.
           </p>
         </div>
-        <ul className={styles.csCardGroup}>
+        <ul className={`w-full flex flex-col items-center relative z-10 ${styles.csCardGroup}`}>
           {packages.map((card, index) => (
             <li className={`${styles.csItem} ${index === 1 ? styles.csItemPopular : ''}`} key={index}>
               <span className={styles.csPackage}>{card.package}</span>

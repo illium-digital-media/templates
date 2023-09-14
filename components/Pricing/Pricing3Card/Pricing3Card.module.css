@@ -1,75 +1,37 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   .pricing3Card {
-    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
-    font-family: 'Roboto', 'Arial', sans-serif;
     padding: var(--sectionPadding);
     background-color: #F7F8F8;
-    position: relative;
   }
    .csContainer {
-    width: 100%;
     max-width: 80em;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     /* 48px - 64px */
     gap: clamp(3rem, 6vw, 4rem);
-    position: relative;
   }
-   .csContent {
-    /* set text align to left if content needs to be left aligned */
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* centers content horizontally, set to flex-start to left align */
-    align-items: center;
-    position: relative;
-    z-index: 10;
-  }
+
    .csTopper {
     font-size: var(--topperFontSize);
     line-height: 1.2em;
-    text-transform: uppercase;
-    text-align: inherit;
     letter-spacing: .1em;
-    font-weight: 700;
     color: var(--primary);
-    margin-bottom: 0.25rem;
-    display: block;
   }
    .csTitle {
     font-size: var(--headerFontSize);
-    font-weight: 900;
     line-height: 1.2em;
     text-align: inherit;
     max-width: 43.75rem;
-    margin: 0 0 1rem 0;
     color: var(--headerColor);
-    position: relative;
   }
    .csText {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
-    text-align: inherit;
-    width: 100%;
     max-width: 40.625rem;
-    margin: 0;
     color: var(--bodyTextColor);
   }
    .csCardGroup {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     /* 16px - 20px */
     gap: clamp(1rem, 1.8vw, 1.25rem);
-    position: relative;
-    z-index: 10;
   }
    .csItem {
     text-align: left;

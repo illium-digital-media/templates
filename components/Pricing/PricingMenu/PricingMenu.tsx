@@ -1,67 +1,29 @@
 import React from 'react';
 import styles from './PricingMenu.module.css'; // Import your module.css file
+import menuItems from './menuitems';
 
 const PricingMenu: React.FC = () => {
-  const menuItems = [
-    {
-      header: 'Haircut With Blow Dry',
-      price: '$39',
-      text: 'Creative way to paint, decorate, enhance, and embellish.',
-    },
-    {
-      header: 'Hair Styling',
-      price: '$49',
-      text: 'Our expert stylists will give you the perfect look.',
-    },
-    {
-      header: 'Coloring Services',
-      price: '$59',
-      text: 'Experience vibrant and long-lasting hair colors.',
-    },
-    {
-      header: 'Hair Extensions',
-      price: '$69',
-      text: 'Get longer and fuller hair instantly with our extensions.',
-    },
-    {
-      header: 'Hair Spa Treatment',
-      price: '$79',
-      text: 'Relax and rejuvenate with our luxurious hair spa treatment.',
-    },
-  ];
-
   return (
-    <section className={styles.pricingMenu}>
-      <div className={styles.csContainer}>
-        <div className={styles.csContent}>
-          <span className={styles.csTopper}>Pricing</span>
-          <h2 className={styles.csTitle}>All Hair Services</h2>
+    <section className={`p-section ${styles.pricingMenu}`}>
+      <div className={`w-full m-auto flex flex-col items-center ${styles.csContainer}`}>
+        <div className={`text-left w-full flex flex-col items-center`}>
+          <span className={`uppercase font-bold mb-1 text-primary text-topperFontSize ${styles.csTopper}`}>Pricing</span>
+          <h2 className={`font-black mb-4 text-headerColor ${styles.csTitle}`}>All Hair Services</h2>
         </div>
-        <div className={styles.csMenu}>
-          {/* Left Menu */}
-          <ul className={styles.csMenuGroup}>
-            {menuItems.map((item, index) => (
-              <li className={styles.csMenuItem} key={index}>
-                <h3 className={styles.csH3}>
-                  <span className={styles.csHeader}>{item.header}</span>
-                  <span className={styles.csPrice}>{item.price}</span>
-                </h3>
-                <p className={styles.csMenuText}>{item.text}</p>
-              </li>
-            ))}
-          </ul>
-          {/* Right Menu */}
-          <ul className={styles.csMenuGroup}>
-            {menuItems.map((item, index) => (
-              <li className={styles.csMenuItem} key={index}>
-                <h3 className={styles.csH3}>
-                  <span className={styles.csHeader}>{item.header}</span>
-                  <span className={styles.csPrice}>{item.price}</span>
-                </h3>
-                <p className={styles.csMenuText}>{item.text}</p>
-              </li>
-            ))}
-          </ul>
+        <div className={`w-full flex flex-col items-center justify-center md:flex-row md:justify-between ${styles.csMenu}`}>
+          {menuItems.map((_, index) => (
+            <ul key={index} className={`flex flex-col md:w-full ${styles.csMenuGroup}`}>
+              {menuItems[index].map((item, itemIndex) => (
+                <li className={`flex flex-col items-start justify-content gap-2 ${styles.csMenuItem}`} key={itemIndex}>
+                  <h3 className={`w-full relative flex justify-between items-start gap-6 before:bg-gray-200 before:h-0.5 before:absolute before:block before:w-full ${styles.csH3}`}>
+                    <span className={`pr-2 bg-white font-bold text-headerColor ${styles.csHeader}`}>{item.header}</span>
+                    <span className={`text-base pl-2 bg-white text-headerColor ${styles.csPrice}`}>{item.price}</span>
+                  </h3>
+                  <p className={`text-base ${styles.csMenuText}`}>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          ))}
         </div>
       </div>
     </section>
