@@ -1,0 +1,173 @@
+/*-- -------------------------- */
+/*           Steps            */
+/* -------------------------- --*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .process3Steps {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+  }
+   .csContainer {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+   .csContent {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+   .csTopper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+   .csTitle {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+   .csText {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+   .csText {
+    /* Override.  csTopper csTitle and first csText should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    max-width: 66.5rem;
+  }
+   .csButtonSolid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+   .csButtonSolid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width .3s;
+  }
+   .csButtonSolid:hover:before {
+    width: 100%;
+  }
+   .csCardGroup {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 20px - 40px */
+    gap: clamp(1.25rem, 3vw, 2.5rem);
+  }
+   .csItem {
+    text-align: center;
+    list-style: none;
+    width: 100%;
+    max-width: 20.375rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+   .csPicture {
+    margin-bottom: 1.5rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    background-color: rgba(206, 65, 13, 0.05);
+    border-radius: 1rem 0 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   .csH3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    text-align: inherit;
+    margin: 0 0 0.75rem 0;
+    color: var(--headerColor);
+  }
+   .csItemP {
+    font-size: 1rem;
+    line-height: 1.5em;
+    text-align: inherit;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+   .csArrow {
+    /* 48px - 80px */
+    width: clamp(3rem, 6vw, 5rem);
+    height: auto;
+    display: block;
+    flex: none;
+    transform: rotate(120deg);
+  }
+   .csArrowImg {
+    width: 100%;
+    display: block;
+  }
+   .csIcon {
+    width: 2rem;
+    height: auto;
+    display: block;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+   .csCardGroup {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+   .csArrow {
+    align-self: center;
+    transform: rotate(40deg);
+  }
+}

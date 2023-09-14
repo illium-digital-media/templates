@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './MeetOurTeam4Card.module.css'; // Import the module CSS
+import Topper from '@/components1/Topper/Topper';
 
 const teamMembers = [
   {
@@ -54,7 +55,7 @@ function MeetOurTeam4Card() {
     <section className={styles.meetOurTeam4Card}>
       <div className={styles.csContainer}>
         <div className={styles.csContent}>
-          <span className={styles.csTopper}>Our Team</span>
+          <Topper text='Our Team' />
           <h2 className={styles.csTitle}>Our Expert Team Members</h2>
           <p className={styles.csText}>
             At Stitch Salon Service, we strive to give the best experience and service to every client that walks in the door. Meet the team members that make it all possible.

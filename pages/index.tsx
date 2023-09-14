@@ -18,6 +18,18 @@ import SideBySideStandardVol3 from '@/components/SideBySide/StandardVol3/SideByS
 import PricingMenu from '@/components/Pricing/PricingMenu/PricingMenu'
 import Pricing3Card from '@/components/Pricing/Pricing3Card/Pricing3Card'
 import Gallery5Images from '@/components/Gallery/5Images/Gallery5Images'
+import Gallery6Images from '@/components/Gallery/6Images/Gallery6Images'
+import Gallery8Images from '@/components/Gallery/8Images/Gallery8Images'
+import Process3Steps from '@/components/Process/Process3Steps/Process3Steps'
+import Process4Steps from '@/components/Process/Process4Steps copy/Process4Steps'
+import Stats4 from '@/components/Stats/Stats4/Stats4'
+import StatsSBS4 from '@/components/Stats/StatsSBS4/StatsSBS4'
+import Stats4Vol2 from '@/components/Stats/Stats4Vol2/Stats4Vol2'
+import WhyChooseUs from '@/components/WhyChooseUs/WhyChooseUs/WhyChooseUs'
+import WhyChooseUsStats from '@/components/WhyChooseUs/WhyChooseUsStats/WhyChooseUsStats'
+import WhyChooseUsSideBySide from '@/components/WhyChooseUs/WhyChooseUsSideBySide/WhyChooseUsSideBySide'
+import WCUSideBySideVol2 from '@/components/WhyChooseUs/WCUSideBySideVol2/WCUSideBySideVol2'
+import Form from '@/components/Form/Form/Form'
 
 export default function Home() {
   return (
@@ -42,6 +54,18 @@ export default function Home() {
       <PricingMenu />
       <Pricing3Card />
       <Gallery5Images />
+      <Gallery6Images />
+      <Gallery8Images />
+      <Process3Steps />
+      <Process4Steps />
+      <Stats4 />
+      <StatsSBS4 />
+      <Stats4Vol2 />
+      <WhyChooseUs />
+      <WhyChooseUsStats />
+      <WhyChooseUsSideBySide />
+      <WCUSideBySideVol2 />
+      <Form />
     </>
 
   )

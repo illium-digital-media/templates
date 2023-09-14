@@ -1,0 +1,86 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .stats4 {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+    background-color: #1a1a1a;
+  }
+  .csCardGroup {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 37.5em;
+    margin: auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  .csItem {
+    list-style: none;
+    width: 14.6875rem;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .csPicture {
+    width: 5rem;
+    height: 5rem;
+    /* 12px - 20px */
+    margin-right: clamp(0.75rem, 3vw, 1.25rem);
+    border-radius: 50%;
+    border: 1px solid var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  .csIcon {
+    width: 2.5rem;
+    height: auto;
+  }
+  .csFlexGroup {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .csNumber {
+    font-size: var(--headerFontSize);
+    color: var(--bodyTextColorWhite);
+    font-weight: 900;
+    line-height: 1.2em;
+    margin: 0;
+    display: block;
+  }
+  .csDesc {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    color: #858585;
+    display: block;
+  }
+}
+
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  .csCardGroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 1.25rem;
+    row-gap: 2rem;
+  }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .csCardGroup {
+    max-width: 80rem;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+  }
+}

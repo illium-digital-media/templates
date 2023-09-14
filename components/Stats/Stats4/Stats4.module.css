@@ -1,0 +1,162 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .stats4 {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    z-index: 1;
+  }
+   .csContainer {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    /* 48px - 100px */
+    gap: clamp(3rem, 8vw, 6.25rem);
+  }
+   .csCardGroup {
+    width: 100%;
+    /* changes to 100% at large desktop */
+    max-width: 39rem;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    row-gap: 1.875rem;
+    position: relative;
+  }
+   .csCardGroup:before {
+    /* long center line */
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: var(--primary);
+    opacity: .4;
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+   .csItem {
+    text-align: center;
+    list-style: none;
+    width: 50%;
+    display: block;
+    position: relative;
+  }
+   .csItem:nth-of-type(odd) {
+    /* short vertical lines */
+  }
+   .csItem:nth-of-type(odd):before {
+    content: '';
+    width: 1px;
+    height: 5rem;
+    background: var(--primary);
+    opacity: .4;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+   .csNumber {
+    /* 64px - 120px */
+    font-size: clamp(4rem, 16vw, 7.5rem);
+    font-weight: 900;
+    line-height: 1.2em;
+    -webkit-text-stroke: 2px var(--primary);
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    display: block;
+  }
+   .csDesc {
+    /* 13px -25px */
+    font-size: clamp(0.8125rem, 3.5vw, 1.5625rem);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+  }
+   .csPicture {
+    width: 100%;
+    /* 328px - 640px */
+    height: clamp(20.5rem, 45vw, 38.75rem);
+    display: block;
+    position: relative;
+  }
+   .csPicture img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+   .csBackground {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+  }
+   .csBackground img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Large Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+   .csCardGroup {
+    max-width: 100%;
+    flex-wrap: nowrap;
+  }
+   .csCardGroup:before {
+    display: none;
+  }
+   .csCardGroup .csItem {
+    /* short vertical lines */
+  }
+   .csCardGroup .csItem:last-of-type:before {
+    display: none;
+  }
+   .csCardGroup .csItem:before {
+    content: '';
+    width: 1px;
+    height: 5rem;
+    background: var(--primary);
+    opacity: .4;
+    position: absolute;
+    display: block;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+  }
+}
+
+/* Big Desktop Parallax Effect - 1500px */
+@media only screen and (min-width: 93.75rem) {
+   .csBackground {
+    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/MISC/marble.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+   .csBackground img {
+    display: none;
+  }
+}

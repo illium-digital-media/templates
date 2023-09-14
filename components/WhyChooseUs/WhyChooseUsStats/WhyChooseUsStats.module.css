@@ -1,0 +1,250 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .csSection {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: "Roboto", "Arial", sans-serif;
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  .csSection:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: url("https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/chevron-pattern-light3.svg");
+    background-position: center;
+    background-size: auto;
+    background-repeat: repeat;
+    opacity: .3;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  .csContainer {
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  .csContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+  .csFlex {
+    /* set text align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  .csTopper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    font-weight: 700;
+    text-align: inherit;
+    margin-bottom: 0.25rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+  }
+  .csTitle {
+    font-size: var(--headerFontSize);
+    line-height: 1.2em;
+    font-weight: 900;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  .csText {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    max-width: 40.625rem;
+    width: 100%;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  .csTitle {
+    /* Override.  cs-topper cs-title and first cs-text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    max-width: 20ch;
+  }
+  .csCardGroup {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  .csItem {
+    list-style: none;
+    width: 100%;
+    /* prevents padding from affecting height and width */
+    /* 16px - 40px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(1rem, 3vw, 2.5rem) clamp(1rem, 2.5vw, 2rem);
+    box-sizing: border-box;
+    background: #f7f7f7;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    gap: 0.75rem;
+    /* clips cs-icon overflowing */
+    overflow: hidden;
+    grid-column: span 6;
+  }
+  .csIcon {
+    /* 32px - 40px */
+    width: clamp(2rem, 3vw, 2.5rem);
+    height: auto;
+    margin: 0;
+    flex: none;
+  }
+  .csH3 {
+    /* 16px - 25px */
+    font-size: clamp(1rem, 2vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 900;
+    width: 100%;
+    margin: 0;
+    color: var(--headerColor);
+    /* wraps longer words on the smallest screen sizes */
+    overflow-wrap: break-word;
+  }
+  .csStatGroup {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .csStat {
+    list-style: none;
+    margin: 0;
+    /* 16px - 40px */
+    padding: clamp(1rem, 3vw, 2.5rem) 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    grid-column: span 2;
+    /* border code */
+    /* remove the border on the far-right elements */
+    /* makes the last two items span across multiple columns. changes at desktop to one line */
+  }
+  .csStat:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(72, 72, 72, 0) 0%, #484848 50%, rgba(72, 72, 72, 0) 100%);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .csStat:nth-of-type(3):before,
+  .csStat:nth-of-type(5):before {
+    content: none;
+  }
+  .csStat:nth-of-type(4),
+  .csStat:nth-of-type(5) {
+    grid-column: span 3;
+  }
+  .csDesc {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: center;
+    /* keeps the width of the stat description from overflowing onto the border */
+    /* 88px - 176px */
+    width: clamp(5.5rem, 20vw, 11rem);
+    margin-bottom: 0.5rem;
+    color: #858585;
+    display: block;
+  }
+  .csNumber {
+    /* 25px - 49px */
+    font-size: clamp(1.5625rem, 3vw, 3.0625rem);
+    line-height: 1.2em;
+    font-weight: 900;
+    margin: 0;
+    color: var(--headerColor);
+    display: block;
+  }
+}
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  .csContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .csCardGroup {
+    display: grid;
+    /* makes all grid items stretch to have the same height if their content isn't all the same height */
+    align-items: stretch;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .csItem {
+    grid-column: span 1;
+    flex-direction: row;
+    align-items: center;
+  }
+  .csStatGroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .csContainer {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .csContent {
+    flex-direction: row;
+    align-items: center;
+  }
+  .csTitle,
+  .csText {
+    max-width: none;
+  }
+  .csCardGroup {
+    width: 50%;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  .csStatGroup {
+    max-width: 80rem;
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .csStat {
+    grid-column: span 1;
+  }
+  .csStat:nth-of-type(4),
+  .csStat:nth-of-type(5) {
+    grid-column: span 1;
+  }
+  .csStat:nth-of-type(3):before {
+    content: "";
+  }
+}
