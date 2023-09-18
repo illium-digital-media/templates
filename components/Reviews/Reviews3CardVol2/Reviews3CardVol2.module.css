@@ -1,0 +1,123 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .section {
+    background-color: #f7f7f7;
+  }
+  .container {
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  .content {
+    max-width: 39.375rem;
+    flex-direction: column;
+  }
+  .title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  .text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  /* Remove duplicate styles for .title and .text */
+  .content .title {
+    max-width: 25ch;
+  }
+  .content .text {
+    margin-bottom: 1rem;
+  }
+  .text:last-of-type {
+    margin-bottom: 2rem;
+  }
+  .cardGroup {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+  .item {
+    /* 46px - 56px, pushes up by the same amount the image margin-top pulled it up for proper spacing */
+    margin: clamp(2.5rem, 5vw, 3.5rem) 0 0;
+    background-color: #fff;
+    grid-column: span 12;
+  }
+  .item:hover .flex {
+    background-color: var(--primary);
+  }
+  .icon {
+    width: 3.25rem;
+    /* 24px - 36px, same values as the padding on itemText */
+    top: clamp(1.5rem, 3vw, 2.25rem);
+    right: clamp(1.5rem, 3vw, 2.25rem);
+  }
+  .image {
+    /* 80px - 112px */
+    width: clamp(5rem, 10vw, 7rem);
+    /* 40px - 56px, same growth rate as the image */
+    /* 24px - 36px margin left, same value as the padding on itemText */
+    margin: calc(clamp(2.5rem, 5vw, 3.5rem)*-1) 0 2.25rem clamp(1.25rem, 3vw, 2.25rem);
+  }
+  .itemText {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    /* 24px - 36px */
+    padding: 0 clamp(1.5rem, 3vw, 2.25rem) clamp(1.25rem, 3vw, 2.25rem);
+    /* prevents padding and border from affecting height and width */
+    color: var(--bodyTextColor);
+  }
+  .flex {
+    background-color: #1a1a1a;
+    transition: background-color 0.3s;
+  }
+  .name {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 2.5vw, 1.5625rem);
+    line-height: 1.2em;
+    color: var(--bodyTextColorWhite);
+  }
+  .desc {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .container {
+    max-width: 80rem;
+  }
+  .item {
+    grid-column: span 6;
+  }
+}
+
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .content {
+    width: 50%;
+    max-width: 25.8125rem;
+  }
+  .cardGroup {
+    max-width: 47.375rem;
+  }
+}

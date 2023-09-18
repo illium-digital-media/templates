@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './SideBySideAnimated.module.css';
 import Topper from '@/components1/Topper/Topper';
 import Title from '@/components1/Title/Title';
+import Button from '@/components1/Button/Button';
 
 const SideBySideAnimated = () => {
   return (
@@ -17,7 +18,7 @@ const SideBySideAnimated = () => {
           <p className={styles.csText}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc lobortis mattis aliquam faucibus purus in. Diam ut venenatis tellus in metus vulputate eu. Massa vitae tortor condimentum lacinia quis vel eros donec ac.
           </p>
-          <a href="" className={styles.csButtonSolid}>Contact Us</a>
+          <Button link='' text='Contact Us' />
         </div>
         <div className={styles.csImageGroup}>
           <img className={styles.csSplash} src="https://csimg.nyc3.digitaloceanspaces.com/SideBySide/blue-splash.svg" aria-hidden="true" loading="lazy" decoding="async" alt="splash icon" width="570" height="586" />

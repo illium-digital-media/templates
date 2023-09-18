@@ -1,0 +1,67 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .section {
+    background-color: var(--primary);
+    z-index: 1;
+  }
+  .container {
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  .content {
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  .title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    /* 25 characters wide including spaces */
+    max-width: 25ch;
+    margin: 0;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  .buttonSolid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: var(--headerColor);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--secondary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  .buttonSolid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width .3s;
+  }
+  .buttonSolid:hover:before {
+    width: 100%;
+  }
+  .background {
+    z-index: -1;
+    /* makes it act like a background image */
+    object-fit: cover;
+  }
+}
+

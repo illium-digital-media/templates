@@ -1,0 +1,151 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .section {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+  }
+  .container {
+    width: 100%;
+    /* changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    row-gap: clamp(3rem, 6vw, 4rem);
+    /* 60px - 108px */
+    column-gap: clamp(3.7rem, 8vw, 6.75rem);
+  }
+  .content {
+    text-align: left;
+    width: 100%;
+    max-width: 33.875rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  .title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 15ch;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  .text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  .text {
+    /* text override. topper title and first text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This second text is a section specific override that stays inside this stitch */
+    margin-bottom: 2rem;
+  }
+  .review {
+    /* 15px - 17px */
+    font-size: clamp(15px, 5vw, 1.0625rem);
+    line-height: 1.5em;
+    margin: 0 auto;
+    /* 28px - 32px */
+    margin-bottom: clamp(1.75rem, 0.5vw, 2rem);
+    padding: 0.75rem 0 0.75rem 1.5rem;
+    color: var(--headerColor);
+    /* Prevents padding from affecting height & width */
+    box-sizing: border-box;
+    position: relative;
+  }
+  .review:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0.3125rem;
+    background: var(--primaryLight);
+    opacity: 1;
+    top: 0;
+    left: 0;
+  }
+  .name {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin: 0.75rem 0 0;
+    display: block;
+    color: var(--headerColor);
+  }
+  .picture {
+    width: 98%;
+    margin: 0;
+    position: relative;
+    display: block;
+    /* width divided by height 320/340 */
+    aspect-ratio: 0.94117647;
+    /* 8px - 12px */
+    margin-left: clamp(0.5rem, 1vw, 0.75rem);
+  }
+  .picture:before {
+    content: '';
+    position: absolute;
+    height: 12.125rem;
+    width: 12.125rem;
+    background: var(--primaryLight);
+    opacity: 1;
+    /* -8px to -12px */
+    /* the calc function sets the clamp value to a negative number */
+    top: calc(clamp(.5rem, .6vw, .75em) * -1);
+    left: calc(clamp(.5rem, .6vw, .75em) * -1);
+  }
+  .picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .content {
+    text-align: left;
+    align-items: flex-start;
+  }
+  .picture {
+    /* 336px - 530px */
+    width: clamp(21rem, 44vw, 33.125rem);
+    /* 534px - 641px */
+    height: clamp(33.375rem, 58.6vw, 40.0625rem);
+    /* reset margin to account for the pesudo element square positioning */
+    margin: 0.75rem 0 0 0.75rem;
+    margin-right: 0;
+    margin-bottom: 0;
+    /* no longer need aspect ratio */
+    aspect-ratio: initial;
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './MeetOurTeam4CardVol2.module.css'; // Import the module CSS
 import Topper from '@/components1/Topper/Topper';
 import Title from '@/components1/Title/Title';
+import Button from '@/components1/Button/Button';
 
 const teamMembers = [
   {
@@ -35,7 +36,7 @@ const MeetOurTeam4CardVol2 = () => {
             <Topper text='Meet Us' />
             <Title title='Our Team Members' />
           </div>
-          <a href="" className={styles.csButtonSolid}>View All Members</a>
+          <Button link='' text='View All Members' />
         </div>
         <ul className={styles.csCardGroup}>
           {teamMembers.map((member, index) => (

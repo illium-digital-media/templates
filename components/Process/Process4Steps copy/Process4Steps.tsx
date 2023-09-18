@@ -3,6 +3,7 @@ import styles from './Process4Steps.module.css';
 import Topper from '@/components1/Topper/Topper';
 import stepsData from './steps';
 import Title from '@/components1/Title/Title';
+import Button from '@/components1/Button/Button';
 
 const Process4Steps: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ const Process4Steps: React.FC = () => {
           <p className={styles.csText}>
             strong amet, consectetur adipiscing elit. At tortor facilisis non, rutrum sagittis, libero. Iaculis egestas enim lacinia est phasellus odio laoreet nisl amet.
           </p>
-          <a href="" className={styles.csButtonSolid}>Read More</a>
+          <Button link='' text='Read More' />
         </div>
         {/* Right Section */}
         <ul className={styles.csRightSection}>

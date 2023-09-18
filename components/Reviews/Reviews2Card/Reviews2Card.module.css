@@ -1,0 +1,163 @@
+/* Reviews */
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .section {
+    /* Remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+  }
+  .container {
+    width: 100%;
+    /* Changes to 1280px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  .content {
+    /* Set text-align to left if content needs to be left aligned */
+    text-align: left;
+    width: 100%;
+    max-width: 32.625rem;
+    display: flex;
+    flex-direction: column;
+    /* Centers content horizontally, set to flex-start to left align */
+    align-items: flex-start;
+  }
+  .topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  .title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  .text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  .cardGroup {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.15rem);
+  }
+  .item {
+    list-style: none;
+    width: 100%;
+    max-width: 39.375rem;
+    /* 32px - 60px top & bottom */
+    /* 16px - 48px left & right */
+    padding: clamp(2rem, 6.15vw, 3.75rem) clamp(1rem, 4.15vw, 3rem);
+    background-color: #F1F1F4;
+    /* Prevents padding from adding to height and width */
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+  }
+  .stars {
+    /* 169px - 189px */
+    width: clamp(10.5625rem, 20vw, 11.8125rem);
+    height: auto;
+    /* 20px - 24px */
+    margin-bottom: clamp(1.25rem, 3vw, 1.5rem);
+    display: block;
+  }
+  .itemText {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    /* 40px - 64px */
+    margin-bottom: clamp(2.5rem, 8vw, 4rem);
+    color: var(--bodyTextColor);
+  }
+  .flexGroup {
+    /* In case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if the parent is a flexbox */
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .profile {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    /* Clips image corners to make a circle */
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+  .profile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes the image behave like a background image */
+    object-fit: cover;
+  }
+  .name {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.5em;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    color: var(--headerColor);
+    display: block;
+  }
+  .job {
+    /* 13px - 16px */
+    font-size: clamp(0.8125rem, 1.6vw, 1rem);
+    line-height: 1.2em;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .01em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+  .container {
+    max-width: 80rem;
+  }
+  .cardGroup {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}

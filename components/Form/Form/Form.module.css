@@ -12,10 +12,7 @@
   .csText {
     font-size: var(--bodyFontSize);
     line-height: 1.5em;
-    text-align: inherit;
-    width: 100%;
     max-width: 40.625rem;
-    margin: 0;
     color: var(--bodyTextColor);
   }
 
@@ -28,28 +25,17 @@
     /* 13px - 16px */
     font-size: clamp(0.8125rem, 1.5vw, 1rem);
     line-height: 1.2em;
-    text-transform: uppercase;
-    font-weight: 700;
     letter-spacing: .1em;
-    margin: 0 0 1rem 0;
     color: #B4B2C7;
-    display: block;
   }
 
   .csLink {
     /* 16px - 20px */
     font-size: clamp(1rem, 2vw, 1.25rem);
-    text-decoration: none;
     line-height: 1.5em;
-    font-weight: 700;
     /* 16px - 32px */
     margin: 0 0 clamp(1rem, 2.5vw, 2rem);
     color: var(--headerColor);
-    display: block;
-  }
-
-  .csLink:hover {
-    text-decoration: underline;
   }
 
   .csLink:last-of-type {
@@ -59,9 +45,6 @@
   .csSocial {
     /* 32px - 80px */
     margin-top: clamp(2rem, 6vw, 5rem);
-    display: inline-flex;
-    justify-content: flex-start;
-    gap: 0.75em;
   }
 
   .csSocialLink {
@@ -69,11 +52,6 @@
     width: clamp(2rem, 4vw, 3.25rem);
     height: clamp(2rem, 4vw, 3.25rem);
     background-color: #4E4B66;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     z-index: 1;
     transition: transform 0.3s, background-color 0.3s;
   }
@@ -86,21 +64,16 @@
   .csSocialImg {
     /* 14px - 24px */
     height: clamp(0.875rem, 2vw, 1.5rem);
-    width: auto;
-    display: block;
   }
 
   .csForm {
-    width: 100%;
     max-width: 40.625rem;
     /* 32px - 40px */
     margin-bottom: clamp(2rem, 5.3vw, 2.5rem);
     /* 20px - 40px */
     padding: clamp(1.25rem, 4.5vw, 2.5rem);
     /* prevents padding from affecting width and height */
-    box-sizing: border-box;
     border: 1px solid #DAD9E3;
-    border-radius: 1rem;
   }
 
   .csForm label {
@@ -111,10 +84,6 @@
     /* 16px - 20px */
     margin-bottom: clamp(1rem, 1em, 1.25rem);
     color: var(--headerColor);
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
   }
 
   .csLabelMessage {
@@ -155,55 +124,26 @@
   }
 
   .csButtonSolid {
-    font-size: 1rem;
     /* 46px - 56px */
     line-height: clamp(2.875em, 5.5vw, 3.5em);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: auto;
-    width: 100%;
-    color: #fff;
-    padding: 0 1.5rem;
     background-color: var(--primary);
-    border: none;
-    border-radius: 0.5rem;
-    display: inline-block;
-    position: relative;
     z-index: 1;
-    /* prevents padding from adding to the width */
-    box-sizing: border-box;
   }
 
   .csButtonSolid:before {
     content: '';
-    position: absolute;
-    height: 100%;
     width: 0%;
-    background: #000;
     opacity: 1;
-    top: 0;
-    left: 0;
     z-index: -1;
-    border-radius: 0.5rem;
     transition: width .3s;
   }
 
-  .csButtonSolid:hover {
-    cursor: pointer;
-  }
-
-  .csButtonSolid:hover:before {
-    width: 100%;
-  }
 }
 
 /* Tablet - 700px */
 @media only screen and (min-width: 43.75rem) {
   .csContainer {
     max-width: 80rem;
-    flex-direction: row;
-    justify-content: space-between;
   }
 
   .csContent {
@@ -213,7 +153,4 @@
     flex: none;
   }
 
-  .csForm {
-    margin: 0;
-  }
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './StatsSBS4.module.css';
 import Topper from '@/components1/Topper/Topper';
 import statsItems from './stats';
+import Button from '@/components1/Button/Button';
 
 const StatsSBS4: React.FC = () => {
   return (
@@ -13,9 +14,7 @@ const StatsSBS4: React.FC = () => {
           <p className={styles.csText}>
             We can help you design your project and develop a comprehensive plan to ensure that it meets your specific needs and requirements. Our team of architects and engineers will work closely with you to create a design that is both functional and aesthetically pleasing.
           </p>
-          <a href="" className={styles.csButtonSolid} aria-label="learn more about us">
-            Learn More
-          </a>
+          <Button link='' text='Learn More' />
         </div>
         <div className={styles.csWrapper}>
           <ul className={styles.csCardGroup}>

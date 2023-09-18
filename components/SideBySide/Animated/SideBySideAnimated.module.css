@@ -66,41 +66,6 @@
   .csText:last-of-type {
     margin-bottom: 2rem;
   }
-  .csButtonSolid {
-    font-size: 1rem;
-    /* 46px - 56px */
-    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-    text-decoration: none;
-    font-weight: 700;
-    text-align: center;
-    margin: 0;
-    color: #fff;
-    min-width: 9.375rem;
-    padding: 0 1.5rem;
-    background-color: var(--primary);
-    border-radius: 0.25rem;
-    display: inline-block;
-    position: relative;
-    z-index: 1;
-    /* Prevents padding from adding to the width */
-    box-sizing: border-box;
-  }
-  .csButtonSolid:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    width: 0%;
-    background: #000;
-    opacity: 1;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 0.25rem;
-    transition: width .3s;
-  }
-  .csButtonSolid:hover:before {
-    width: 100%;
-  }
   .csImageGroup {
     /* Everything in the group is in ems so we can scale them down with this min/max font size tied to the view width */
     font-size: min(2.3vw, 1em);

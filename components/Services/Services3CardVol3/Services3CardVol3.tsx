@@ -1,10 +1,10 @@
 import React from 'react';
 import styles from './Services3CardVol3.module.css';
-import Link from 'next/link';
 import { services } from './services';
 import Graphic from './Graphic';
 import Topper from '@/components1/Topper/Topper';
 import Title from '@/components1/Title/Title';
+import Button from '@/components1/Button/Button';
 
 const Services3CardVol3 = () => {
     return (
@@ -16,7 +16,7 @@ const Services3CardVol3 = () => {
                     <p className={styles.csText}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc massa ut sed odio cursus. Malesuada scelerisque eget eu, sollicitudin tellus nibh aenean enim sed. Ut vitae eget commodo consectetur felis augue.
                     </p>
-                    <Link href="/" className={styles.csButtonSolid}>Get Free Quote</Link>
+                    <Button link='' text='Get Free Quote' />
                 </div>
                 <ul className={styles.csCardGroup}>
                     {services.map((item, index) => (

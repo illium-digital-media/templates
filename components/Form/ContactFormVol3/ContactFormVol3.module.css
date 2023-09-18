@@ -1,0 +1,328 @@
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .section {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+  }
+  .container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  .content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  .topper {
+    font-size: var(--topperFontSize);
+    line-height: 1.2em;
+    text-transform: uppercase;
+    text-align: inherit;
+    letter-spacing: .1em;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
+    display: block;
+  }
+  .title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 32.625rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  .text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 32.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  .form {
+    width: 100%;
+    /* 32px - 40px */
+    margin-bottom: clamp(2rem, 5.3vw, 2.5rem);
+    /* 20px - 40px */
+    padding: clamp(1.25rem, 4.5vw, 2.5rem);
+    /* prevents padding and border from affecting height and width */
+    box-sizing: border-box;
+    border: 1px solid #DAD9E3;
+    border-radius: 1rem;
+  }
+  .label {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.3vw, 1rem);
+    line-height: 1.5em;
+    font-weight: 700;
+    /* 16px - 20px */
+    margin-bottom: clamp(1rem, 1em, 1.25rem);
+    color: var(--headerColor);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .labelMessage {
+    /* 32px - 40px */
+    margin-bottom: clamp(2rem, 4.5vw, 2.5rem);
+  }
+  .input,
+  .textarea {
+    font-size: 1rem;
+    width: 100%;
+    height: 4rem;
+    margin-top: 0.25rem;
+    padding-left: 1.25rem;
+    /* set transparent border so on hover border doesn't make it glitch */
+    border: 1px solid transparent;
+    border-bottom: 1px solid #B4B2C7;
+    /* prevents border & padding from affecting height */
+    box-sizing: border-box;
+    transition: border .3s;
+  }
+  .input:hover,
+  .textarea:hover {
+    border: 1px solid var(--primary);
+  }
+  .input::placeholder,
+  .textarea::placeholder {
+    color: #7D799C;
+  }
+  .textarea {
+    font-family: inherit;
+    margin: 0;
+    padding-top: 1.25rem;
+    min-height: 7.5rem;
+  }
+  .buttonSolid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  .buttonSolid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width .3s;
+  }
+  .buttonSolid:hover:before {
+    width: 100%;
+  }
+  .submit {
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  .submit:hover {
+    cursor: pointer;
+  }
+  .rightSection {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    /* 28px - 40px */
+    gap: clamp(1.75rem, 4vw, 2.5rem);
+    position: relative;
+  }
+  .ul {
+    padding: 0;
+    /* 16px - 32px */
+    padding-left: clamp(1rem, 3vw, 2rem);
+    margin: 0;
+    width: 100%;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  .li {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .li:hover .iconWrapper {
+    transform: scale(1.2);
+  }
+  .li:nth-of-type(2) {
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid #DAD9E3;
+  }
+  .header {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    margin-bottom: 0.5rem;
+    color: var(--headerColor);
+    display: block;
+  }
+  .link {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.2em;
+    text-decoration: none;
+    color: var(--bodyTextColor);
+    position: relative;
+  }
+  .link:hover:before {
+    width: 100%;
+  }
+  .link:before {
+    /* top right box */
+    content: '';
+    width: 0%;
+    height: 2px;
+    /* current color of parent */
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: width .3s;
+  }
+  .block {
+    /* drop the address to two lines */
+    display: block;
+  }
+  .iconWrapper {
+    /* 32px - 36px */
+    margin-right: clamp(2rem, 2.5vw, 2.25rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    transition: transform .3s;
+  }
+  .icon {
+    /* 32px -36px */
+    width: clamp(2rem, 3vw, 2.25rem);
+    height: auto;
+    display: block;
+  }
+  .picture {
+    width: 100%;
+    border-radius: clamp(1rem, 1.5vw, 1.25rem);
+    /* clips image corners */
+    overflow: hidden;
+    display: block;
+    position: relative;
+    /* width divided height */
+    aspect-ratio: 1.44;
+  }
+  .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+/* Tablet - 700px */
+@media only screen and (min-width: 43.75rem) {
+  .form {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* sends it to the right in the 2nd position */
+    order: 2;
+  }
+  .label {
+    width: 48%;
+  }
+  .labelMessage {
+    width: 100%;
+  }
+  .buttonSolid {
+    margin-left: 0;
+  }
+  .rightSection {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    column-gap: 1.25em;
+    row-gap: 4rem;
+  }
+  .form {
+    width: 50%;
+    max-width: 40.625rem;
+  }
+  .label {
+    width: 100%;
+  }
+  .rightSection {
+    width: 45%;
+    max-width: 33.875rem;
+    /* prevents flexbox from squishing it */
+    flex: none;
+    flex-direction: column;
+  }
+  .block {
+    /* sets address stay in one line */
+    display: inline-block;
+  }
+  .picture {
+    width: 100%;
+    max-width: 100%;
+    height: 27.375rem;
+  }
+}

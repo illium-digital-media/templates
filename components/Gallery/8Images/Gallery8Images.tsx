@@ -3,6 +3,7 @@ import styles from './Gallery8Images.module.css';
 import Topper from '@/components1/Topper/Topper';
 import imageData from './images';
 import Title from '@/components1/Title/Title';
+import Button from '@/components1/Button/Button';
 
 const Gallery8Images: React.FC = () => {
   return (
@@ -35,9 +36,7 @@ const Gallery8Images: React.FC = () => {
           ))}
           {/* Add more images as needed */}
         </ul>
-        <a href="" className={styles.csButtonSolid}>
-          View Full Gallery
-        </a>
+        <Button link='' text='View Full Gallery' />
       </div>
     </section>
   );

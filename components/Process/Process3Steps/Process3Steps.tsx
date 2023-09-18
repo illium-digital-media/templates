@@ -2,8 +2,8 @@ import React from 'react';
 import styles from './Process3Steps.module.css';
 import Topper from '@/components1/Topper/Topper';
 import stepsData from './steps';
-import Link from 'next/link';
 import Title from '@/components1/Title/Title';
+import Button from '@/components1/Button/Button';
 
 const Arrow: React.FC = () => (
   <li className={`${styles.csItem} ${styles.csArrow}`} aria-hidden="true">
@@ -36,7 +36,7 @@ const Process3Steps: React.FC = () => {
             </React.Fragment>
           ))}
         </ul>
-        <Link href="" className={styles.csButtonSolid}>View All Projects</Link>
+        <Button link='' text='View All Projects' />
       </div>
     </section>
   );

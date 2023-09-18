@@ -1,0 +1,52 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+   .container {
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+   .text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+
+   .item {
+    max-width: 25.8125rem;
+  }
+   .img {
+    width: 4.25rem;
+    height: 4.25rem;
+    margin: 0 auto 1rem;
+  }
+   .name {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    color: var(--headerColor);
+  }
+   .desc {
+    line-height: 1.5em;
+    margin: 0 0 1rem;
+    color: #7D799C;
+    display: block;
+  }
+   .itemText {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.5em;
+    color: var(--bodyTextColor);
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+   .cardGroup {
+    row-gap: 2.5rem;
+  }
+   .item {
+    /* we do this so it's stackable. You can add new any number of reviews you want and they will stack and center in the middle. We dont use grid because if you have an odd number of reviews, they don't stay centered.  They align with their grid lines. If you want 4 reviews in a row, lower the width under 23% to get the desired sizes fit 4 in a row and then stack when you add more*/
+    width: clamp(31.5%, 30vw, 32.3%);
+  }
+}

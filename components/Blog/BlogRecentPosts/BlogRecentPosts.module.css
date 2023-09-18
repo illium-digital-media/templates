@@ -1,0 +1,182 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .section {
+    padding: var(--sectionPadding);
+    background-color: #1a1a1a;
+  }
+  .container {
+    /* changes to 1280px at desktop */
+    max-width: 36.5rem;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  .title {
+    font-size: var(--headerFontSize);
+    font-weight: 900;
+    line-height: 1.2em;
+    text-align: inherit;
+    max-width: 43.75rem;
+    margin: 0 0 1rem 0;
+    color: var(--headerColor);
+    position: relative;
+  }
+  .text {
+    font-size: var(--bodyFontSize);
+    line-height: 1.5em;
+    text-align: inherit;
+    width: 100%;
+    max-width: 40.625rem;
+    margin: 0;
+    color: var(--bodyTextColor);
+  }
+  .title {
+    /* Override.  topper title and first text should be removed and put into your global css sheet so it can control every instance of them on your site and is consistent. This selector is a section specific override that stays inside this stitch */
+    margin-bottom: 2rem;
+    max-width: 20ch;
+    color: var(--bodyTextColorWhite);
+  }
+  .buttonSolid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 2rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  .buttonSolid:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width .3s;
+  }
+  .buttonSolid:hover:before {
+    width: 100%;
+  }
+  .buttonSolid {
+    /* prevents flexbox from squishing it */
+    flex: none;
+  }
+  .cardGroup {
+    /* 16px - 20px */
+    gap: clamp(1rem, 2vw, 1.25rem);
+  }
+
+  .item:hover .info:before {
+    opacity: 1;
+    background-color: var(--primary);
+  }
+  .item:hover .picture img {
+    transform: scale(1.15);
+  }
+  .item:hover .date {
+    color: #fff;
+  }
+  .item:hover .icon {
+    filter: brightness(150%);
+  }
+  .item:hover .link {
+    color: #fff;
+  }
+  .picture {
+    height: 30rem;
+    /* removed at tablet */
+    aspect-ratio: 0.68333333;
+    z-index: 1;
+  }
+  .picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* makes sure the top of the image is at the top of the parent, heads won't get cut off this way */
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform .9s;
+  }
+  .info {
+    width: 83%;
+    max-width: 26.25rem;
+    /* 16px - 24px */
+    padding: clamp(1rem, 2vw, 1.5rem);
+  }
+  .info:before {
+    /* background-color */
+    content: '';
+    background: #1a1a1a;
+    opacity: .8;
+    z-index: -1;
+    transition: background-color 0.3s, opacity 0.3s;
+  }
+  .date {
+    line-height: 1.2em;
+    color: #BABABA;
+    transition: color .3s;
+  }
+  .icon {
+    transition: filter .3s;
+  }
+  .h3 {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+  }
+  .desc {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: #f7f7f7;
+  }
+  .link {
+    line-height: 1.2em;
+    color: var(--primary);
+    transition: color .3s;
+  }
+  .link:before {
+    /* underline */
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    transition: background-color 0.3s;
+  }
+}
+/* Tablet - 550px */
+@media only screen and (min-width: 34.375rem) {
+  .title {
+    margin: 0;
+  }
+  .picture {
+    /* remove the aspect ratio so the height can be squished */
+    aspect-ratio: initial;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .container {
+    max-width: 80rem;
+  }
+  .cardGroup {
+    flex-direction: row;
+  }
+}

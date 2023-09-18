@@ -1,0 +1,164 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .footer {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    padding: var(--sectionPadding);
+    background-color: #1a1a1a;
+    /* Navigation Links */
+  }
+  .container {
+    width: 100%;
+    /* reset on desktop */
+    max-width: 43.75rem;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+  }
+  .logoGroup {
+    /* takes up all the space, lets the other ul's wrap below it */
+    width: 100%;
+    position: relative;
+  }
+  .logo {
+    width: 11.125rem;
+    height: auto;
+    display: block;
+    margin-bottom: 1.5rem;
+  }
+  .logoImg {
+    width: 100%;
+    height: auto;
+  }
+  .logoImg.dark {
+    display: none;
+  }
+  .text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    width: 78%;
+    /* changes to 305px at desktop */
+    max-width: 26.25rem;
+    color: var(--bodyTextColorWhite);
+  }
+  .nav {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .navLi {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .header {
+    font-size: 1rem;
+    line-height: 1.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    display: block;
+  }
+  .navLink {
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    display: inline-block;
+    transition: color .3s;
+  }
+  .navLink:before {
+    /* underline */
+    content: '';
+    width: 0%;
+    height: 0.125rem;
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: -0.125rem;
+    left: 0;
+    transition: width .3s;
+  }
+  .navLink:hover {
+    color: var(--primary);
+  }
+  .navLink:hover:before {
+    width: 100%;
+  }
+  .icon {
+    width: 1.5rem;
+    height: auto;
+    margin-right: 0.75rem;
+  }
+  .bottom {
+    max-width: 80rem;
+    margin: auto;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #484848;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .copyright,
+  .copyrightLink {
+    font-size: 1rem;
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+  }
+  .copyrightLink {
+    text-decoration: none;
+    transition: color .3s;
+  }
+  .copyrightLink:hover {
+    color: var(--primary);
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .container {
+    row-gap: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 2.5rem;
+  }
+  .nav {
+    width: auto;
+  }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .container {
+    max-width: 80rem;
+    flex-wrap: nowrap;
+    /* align everything to the right */
+    justify-content: flex-end;
+    column-gap: 5.25rem;
+  }
+  .logoGroup {
+    width: 30%;
+    max-width: 24.1875rem;
+    /* pushes away from everything to the right */
+    margin-right: auto;
+  }
+  .text {
+    width: 100%;
+  }
+}

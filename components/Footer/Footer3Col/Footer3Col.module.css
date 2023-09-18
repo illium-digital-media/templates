@@ -1,0 +1,179 @@
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .footer {
+    /* remove the font family so the Stitch inherits the fonts from your global stylesheet */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    /* 60px - 100px top and bottom */
+    padding: clamp(3.75rem, 7.82vw, 6.25rem) 1rem;
+    background-color: #1a1a1a;
+    /* Navigation Links */
+    /* Contact Links */
+  }
+  .container {
+    width: 100%;
+    /* reset on tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    /* 68px - 100px */
+    column-gap: clamp(4.25rem, calc(10%), 6.25rem);
+  }
+  .logoGroup {
+    /* takes up all the space, lets the other ul's wrap below it */
+    width: 100%;
+    position: relative;
+  }
+  .logo {
+    /* 210px - 240px */
+    width: clamp(13.125rem, 8vw, 15rem);
+    height: auto;
+    display: block;
+    /* 28px - 44px */
+    margin-bottom: clamp(1.75rem, 4.17vw, 2.75rem);
+  }
+  .logoImg {
+    width: 100%;
+    height: auto;
+  }
+  .text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 2.5vw, 1rem);
+    line-height: 1.5em;
+    margin: 0;
+    margin-bottom: 2rem;
+    /* changes to 305px at desktop */
+    max-width: 33.75rem;
+    color: var(--bodyTextColorWhite);
+  }
+  .nav {
+    padding: 0;
+    margin: 0;
+  }
+  .navLi {
+    list-style: none;
+    line-height: 1.5em;
+    margin-bottom: 0.5rem;
+  }
+  .navLi:last-of-type {
+    margin-bottom: 0;
+  }
+  .header {
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 700;
+    margin-bottom: 0.875rem;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+    display: block;
+  }
+  .navLink {
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.5em;
+    color: var(--bodyTextColorWhite);
+    position: relative;
+  }
+  .navLink:before {
+    /* underline */
+    content: '';
+    width: 0%;
+    height: 0.125rem;
+    /* current color of the parent */
+    background: currentColor;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    bottom: -0.125rem;
+    left: 0;
+    transition: width .3s;
+  }
+  .navLink:hover:before {
+    width: 100%;
+  }
+  .contact {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+  }
+  .contactLi {
+    list-style: none;
+    margin-bottom: 0rem;
+  }
+  .contactLi:last-of-type {
+    margin-bottom: 0;
+  }
+  .contactLink {
+    font-size: 1rem;
+    text-decoration: none;
+    line-height: 1.5em;
+    text-align: left;
+    color: var(--bodyTextColorWhite);
+    display: inline-block;
+  }
+  .contactLink:hover {
+    text-decoration: underline;
+  }
+  .address {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+  .socialGroup {
+    /* pushes away from the other flex items */
+    margin-top: auto;
+    margin-left: auto;
+  }
+  .social {
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: 0.75rem;
+  }
+  .socialLink {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #4E4B66;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  .socialLink:hover {
+    background-color: var(--primary);
+    transform: translateY(-0.1875rem);
+  }
+  .socialImg {
+    height: 0.8125rem;
+    width: auto;
+    display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .container {
+    max-width: 80rem;
+    row-gap: 0;
+  }
+  .logoGroup {
+    width: auto;
+    /* pushes everything to the right of it as far as possible in a flexbox */
+    margin-right: auto;
+  }
+  .text {
+    width: 80%;
+    max-width: 19.0625rem;
+    margin: 0;
+  }
+  .nav,
+  .contact {
+    /* 8px - 12px */
+    margin-top: clamp(0.5rem, 1.2vw, 0.75rem);
+  }
+}

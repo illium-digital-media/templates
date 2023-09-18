@@ -30,6 +30,26 @@ import WhyChooseUsStats from '@/components/WhyChooseUs/WhyChooseUsStats/WhyChoos
 import WhyChooseUsSideBySide from '@/components/WhyChooseUs/WhyChooseUsSideBySide/WhyChooseUsSideBySide'
 import WCUSideBySideVol2 from '@/components/WhyChooseUs/WCUSideBySideVol2/WCUSideBySideVol2'
 import Form from '@/components/Form/Form/Form'
+import Footer5Column from '@/components/Footer/Footer5Col/Footer5Col'
+import Footer3Col from '@/components/Footer/Footer3Col/Footer3Col'
+import FooterSimple from '@/components/Footer/FooterSimple/FooterSimple'
+import Footer4Col from '@/components/Footer/Footer4Col/Footer4Col'
+import Footer4ColVol2 from '@/components/Footer/Footer4ColVol2/Footer4ColVol2'
+import FooterSimpleVol2 from '@/components/Footer/FooterSimpleVol2/FooterSimpleVol2'
+import CallToAction from '@/components/CallToAction/CallToAction/CallToAction'
+import CallToActionAndReviews from '@/components/CallToAction/CallToActionAndReviews/CallToActionAndReviews'
+import CallToActionBanner from '@/components/CallToAction/CallToActionBanner/CallToActionBanner'
+import BlogRecentPosts from '@/components/Blog/BlogRecentPosts/BlogRecentPosts'
+import ContactForm from '@/components/Form/ContactForm/ContactForm'
+import ContactFormVol2 from '@/components/Form/ContactFormVol2/ContactFormVol2'
+import ContactFormVol3 from '@/components/Form/ContactFormVol3/ContactFormVol3'
+import Reviews3Card from '@/components/Reviews/Reviews3Card/Reviews3Card'
+import Reviews3CardVol2 from '@/components/Reviews/Reviews3CardVol2/Reviews3CardVol2'
+import Reviews2Card from '@/components/Reviews/Reviews2Card/Reviews2Card'
+import ReviewsSingle from '@/components/Reviews/ReviewsSingle/ReviewsSingle'
+import Reviews3CardVol3 from '@/components/Reviews/Reviews3CardVol3/Reviews3CardVol3'
+import ReviewSingleVol2 from '@/components/Reviews/ReviewsSingleVol2/ReviewsSingleVol2'
+import FAQSideBySide from '@/components/FAQ/SideBySide/SideBySide'
 
 export default function Home() {
   return (
@@ -65,7 +85,34 @@ export default function Home() {
       <WhyChooseUsStats />
       <WhyChooseUsSideBySide />
       <WCUSideBySideVol2 />
+      <Reviews3Card />
+      <Reviews3CardVol2 />
+      <Reviews2Card />
+      <ReviewsSingle />
+      <Reviews3CardVol3 />
+      <ReviewSingleVol2/>
+      <FAQSideBySide />
       <Form />
+      <ContactForm />
+      <ContactFormVol2 />
+      <ContactFormVol3 />
+      <CallToAction />
+      {/* <CallToActionAndReviews /> */}
+      <CallToActionBanner />
+      <BlogRecentPosts />
+
+
+
+
+
+
+
+      <Footer5Column />
+      <Footer3Col />
+      <FooterSimple />
+      <Footer4Col />
+      <Footer4ColVol2 />
+      <FooterSimpleVol2 />
     </>
 
   )
